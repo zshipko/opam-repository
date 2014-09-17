@@ -8,7 +8,7 @@ authors: [
   "Stephane Lescuyer"
 ]
 license: "GNU Library General Public License version 2.1"
-substs: ["opam.patch"]
+substs: "opam.patch"
 build: [
   ["./configure" "--prefix" prefix "--mandir" man]
   [make]
@@ -25,9 +25,10 @@ depends: [
   "ocamlfind"
   "bitstring"
 ]
-depopts: ["cairo" {= "1.2.0"}]
-patches: ["opam.patch"]
+depopts: "cairo"
 depexts: [
   [["debian"] ["autoconf"]]
   [["ubuntu"] ["autoconf"]]
 ]
+conflicts: "cairo" {!= "1.2.0"}
+patches: "opam.patch"

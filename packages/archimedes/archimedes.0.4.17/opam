@@ -15,11 +15,11 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-build-doc: [["ocaml" "setup.ml" "-doc"]]
-remove: [["ocamlfind" "remove" "archimedes"]]
-depends: ["ocamlfind"]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+remove: ["ocamlfind" "remove" "archimedes"]
+depends: "ocamlfind"
 depopts: [
-  "cairo" {= "0.4.2"}
-  "cairo" {= "0.4.1"}
+  "cairo"
   "cairo2"
 ]
+conflicts: "cairo" {= "1.2.0"}
