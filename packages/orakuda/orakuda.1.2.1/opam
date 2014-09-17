@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jun.furuse@gmail.com"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
@@ -10,9 +10,9 @@ remove: [
   ["ocaml" "setup.ml" "-uninstall"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "omake"
-  "spotlib" {>="2.4.0"}
-  "pcre-ocaml" 
+  "spotlib" {>= "2.4.0"}
+  "pcre-ocaml"
 ]
 ocaml-version: [>= "4.01.0"]

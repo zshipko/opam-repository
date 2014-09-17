@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["./configure"]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "zarith"]]
+remove: ["ocamlfind" "remove" "zarith"]
 depends: [
   "conf-gmp"
-  "ocamlfind"
+  "ocamlfind" {build}
 ]
-patches: ["install_fix.patch"]
+patches: "install_fix.patch"

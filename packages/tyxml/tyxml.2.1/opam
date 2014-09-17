@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "tyxml"]]
+remove: ["ocamlfind" "remove" "tyxml"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ocamlnet" {= "3.6.0"}
   "pcre-ocaml"
   "camlp4"

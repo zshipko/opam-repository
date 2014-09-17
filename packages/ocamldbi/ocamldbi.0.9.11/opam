@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "install" "OCAMLDBIDIR=%{lib}%/ocamldbi" "DOCDIR=%{doc}%/ocamldbi"]
 ]
-remove: [["ocamlfind" "remove" "ocamldbi"]]
+remove: ["ocamlfind" "remove" "ocamldbi"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre-ocaml"
 ]
 depopts: [

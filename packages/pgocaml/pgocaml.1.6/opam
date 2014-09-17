@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make ".depend"]
@@ -6,13 +6,13 @@ build: [
   ["ocamlopt" "-shared" "-linkall" "pgocaml.cmxa" "-o" "pgocaml.cmxs"]
   [make "findlib_install"]
 ]
-remove: [["ocamlfind" "remove" "pgocaml"]]
+remove: ["ocamlfind" "remove" "pgocaml"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "extlib" {= "1.5.3"}
   "pcre-ocaml"
   "calendar"
   "csv"
   "camlp4"
 ]
-patches: ["opam.patch"]
+patches: "opam.patch"

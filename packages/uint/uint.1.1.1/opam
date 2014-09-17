@@ -1,11 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "andre@digirati.com.br"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%"]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "uint"]
-]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "uint"]
+depends: "ocamlfind" {build}

@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make "all"]
   [make "opt"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "ocamldap"]]
+remove: ["ocamlfind" "remove" "ocamldap"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ocamlnet" {= "3.6.0"}
   "pcre-ocaml"
   "ssl"

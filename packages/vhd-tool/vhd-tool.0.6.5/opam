@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dave.scott@eu.citrix.com"
 tags: [
   "org:mirage"
@@ -9,9 +9,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [[make "uninstall"]]
+remove: [make "uninstall"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "lwt" {>= "2.4.3"}
   "cstruct" {>= "0.7.1"}
   "vhd-format" {>= "0.6.4"}
@@ -23,7 +23,7 @@ depends: [
   "uri"
   "tar-format"
   "sha"
-  "cohttp" {>="0.9.14" & <"0.10.0"}
+  "cohttp" {>= "0.9.14" & < "0.10.0"}
   "ssl"
 ]
-ocaml-version: [>="4.00.0"]
+ocaml-version: [>= "4.00.0"]

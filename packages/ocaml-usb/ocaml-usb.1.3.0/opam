@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jeremie@dimino.org"
 homepage: "https://github.com/diml/ocaml-usb"
 build: [
@@ -6,9 +6,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "usb"]]
+remove: ["ocamlfind" "remove" "usb"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "oasis" {>= "0.3.0"}
   "lwt" {>= "2.0.0"}
 ]

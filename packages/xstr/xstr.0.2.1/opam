@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make "all"]
   [make "opt"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "xstr"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "xstr"]
+depends: "ocamlfind" {build}

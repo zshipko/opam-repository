@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "pierre.chambart@ocamlpro.com"
-substs: ["data_dir.patch"]
-build: [[make]]
+substs: "data_dir.patch"
+build: [make]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ocamlsdl"
   "conf-sdl-ttf"
   "conf-sdl-image"
   "conf-sdl-mixer"
 ]
-patches: ["data_dir.patch"]
+patches: "data_dir.patch"

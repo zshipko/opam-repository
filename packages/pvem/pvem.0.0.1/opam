@@ -1,14 +1,10 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "seb@mondet.org"
 homepage: "https://bitbucket.org/smondet/pvem"
+build: [
+  ["ocaml" "please.ml" "build"]
+  ["ocaml" "please.ml" "install"]
+]
+remove: ["ocaml" "please.ml" "uninstall"]
+depends: "ocamlfind" {build}
 ocaml-version: [>= "4.00.0"]
-build:
-    [
-    ["ocaml" "please.ml" "build"]
-    ["ocaml" "please.ml" "install"]
-    ]
-remove:
-    [
-    ["ocaml" "please.ml" "uninstall"]
-    ]
-depends: ["ocamlfind"]

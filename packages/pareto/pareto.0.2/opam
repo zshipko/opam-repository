@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "superbobry@gmail.com"
-authors: ["Sergei Lebedev"]
+authors: "Sergei Lebedev"
 homepage: "https://github.com/superbobry/pareto"
 license: "MIT"
 build: [
@@ -8,9 +8,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "pareto"]]
+remove: ["ocamlfind" "remove" "pareto"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "gsl" {>= "1.13.0"}
 ]
 ocaml-version: [>= "4.00.1"]

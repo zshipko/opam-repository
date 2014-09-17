@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "http://raevnos.pennmush.org/code/annexlib/index.html"
 build: [
@@ -7,8 +7,8 @@ build: [
   [make "opt"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "annexlib"]]
+remove: ["ocamlfind" "remove" "annexlib"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre-ocaml"
 ]

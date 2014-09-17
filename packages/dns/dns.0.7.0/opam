@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
 authors: [
   "Anil Madhavapeddy"
@@ -25,7 +25,7 @@ remove: ["ocamlfind" "remove" "dns"]
 depends: [
   "lwt" {>= "2.4.1"}
   "cstruct" {>= "0.7.1" & < "1.0.0"}
-  "ocamlfind"
+  "ocamlfind" {build}
   "re"
   "cmdliner"
   "ipaddr" {>= "0.2.2" & < "2.0.0"}

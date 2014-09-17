@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "mmatalka@gmail.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "riakc"]]
+remove: ["ocamlfind" "remove" "riakc"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "core" {>= "109.12.00"}
   "async" {< "109.58.00"}
   "protobuf"

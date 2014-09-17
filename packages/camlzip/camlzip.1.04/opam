@@ -1,16 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make "all"]
   [make "allopt"]
   [make "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "camlzip"]
-]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "camlzip"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["zlib1g-dev"]]
   [["ubuntu"] ["zlib1g-dev"]]
 ]
-patches: ["camlzip-install.diff"]
+patches: "camlzip-install.diff"

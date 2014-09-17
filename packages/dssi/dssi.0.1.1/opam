@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
-authors: ["Samuel Mimram"]
+authors: "Samuel Mimram"
 homepage: "http://savonet.sourceforge.net"
 license: "GPL v2+"
 build: [
@@ -8,9 +8,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "dssi"]]
+remove: ["ocamlfind" "remove" "dssi"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ladspa"
 ]
 depexts: [

@@ -1,16 +1,16 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "zoggy@bat8.org"
-authors: ["Maxence Guesdon"]
+authors: "Maxence Guesdon"
 homepage: "http://zoggy.github.io/stog/"
 license: "GNU General Public License version 3"
-doc: ["http://zoggy.github.io/stog/doc.html"]
+doc: "http://zoggy.github.io/stog/doc.html"
 build: [
   [make "all"]
   [make "install-lib"]
 ]
-remove: [["ocamlfind" "remove" "stog"]]
+remove: ["ocamlfind" "remove" "stog"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "xmlm" {>= "1.1"}
   "xtmpl" {>= "0.8"}
   "config-file" {>= "1.1"}

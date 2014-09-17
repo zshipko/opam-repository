@@ -1,24 +1,17 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "agarwal1975@gmail.com"
-
 build: [
   ["omake" "-j2" "PREFIX=%{prefix}%" "COMPILE_TEST=false"]
   ["omake" "install"]
 ]
-
-remove: [
-  ["ocamlfind" "remove" "cfstream"]
-]
-
 build-doc: [
   ["omake" "-j2" "doc"]
   ["omake" "install_doc" "DOC_DIR=%{doc}%/cfstream"]
 ]
-
+remove: ["ocamlfind" "remove" "cfstream"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "omake"
   "core"
 ]
-
-ocaml-version: [>="4.00.1"]
+ocaml-version: [>= "4.00.1"]

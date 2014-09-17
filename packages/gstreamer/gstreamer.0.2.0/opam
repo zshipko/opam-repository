@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "gstreamer"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "gstreamer"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libgstreamer0.10-dev"]]
   [["ubuntu"] ["libgstreamer0.10-dev"]]

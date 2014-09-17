@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: [
   "org:mirage"
@@ -6,7 +6,7 @@ tags: [
 ]
 build: [make "install-types"]
 remove: ["ocamlfind" "remove" "mirage-types"]
-depends: "ocamlfind"
+depends: "ocamlfind" {build}
 depopts: [
   "lwt"
   "cstruct"

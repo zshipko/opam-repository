@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "hugo.heuzard@gmail.com"
 build: [
   ["oasis" "setup"]
@@ -6,9 +6,9 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "aws"]]
+remove: ["ocamlfind" "remove" "aws"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "oasis"
   "cryptokit"
   "calendar"

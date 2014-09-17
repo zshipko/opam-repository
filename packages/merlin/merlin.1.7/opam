@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "defree@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
@@ -7,14 +7,12 @@ build: [
   [make "merlin.install"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "yojson"
   "menhir"
 ]
 ocaml-version: [>= "4.00.1" & < "4.02.0"]
-
-post-messages: [
-  "merlin installed.
+post-messages: "merlin installed.
 
 Quick setup for VIM
 -------------------
@@ -46,6 +44,4 @@ Add opam emacs directory to your load-path by appending this to your .emacs:
   (setq merlin-command 'opam)
 
 Take a look at https://github.com/the-lambda-church/merlin for more information
-"
-  {success}
-]
+" {success}

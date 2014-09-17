@@ -1,11 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["sh" "configure" "-ocaml-prefix" prefix "-ocamlfind" "%{bin}%/ocamlfind"]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "bolt"]]
-depends: ["ocamlfind" "camlp4"]
-patches: ["opam.patch"]
+remove: ["ocamlfind" "remove" "bolt"]
+depends: [
+  "ocamlfind" {build}
+  "camlp4"
+]
+patches: "opam.patch"
 ocaml-version: [= "3.12.1"]

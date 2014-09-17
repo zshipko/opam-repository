@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "opensource@janestreet.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "variantslib"]]
+remove: ["ocamlfind" "remove" "variantslib"]
 depends: [
   "camlp4"
-  "ocamlfind"
+  "ocamlfind" {build}
   "type_conv" {= "109.13.00"}
 ]

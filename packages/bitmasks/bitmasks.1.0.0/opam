@@ -1,18 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "david.allsopp@metastack.com"
-authors: [ "David Allsopp" ]
-license: "BSD-3-clause with OCaml linking exception"
+authors: "David Allsopp"
 homepage: "http://forge.ocamlcore.org/projects/bitmasks"
+license: "BSD-3-clause with OCaml linking exception"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "bitmasks"]
-]
-build-doc: [ "ocaml" "setup.ml" "-doc" ]
-depends: [
-  "ocamlfind"
-]
-ocaml-version: [ >= "3.12.0" ]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+remove: ["ocamlfind" "remove" "bitmasks"]
+depends: "ocamlfind" {build}
+ocaml-version: [>= "3.12.0"]

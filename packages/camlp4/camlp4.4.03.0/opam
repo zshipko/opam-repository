@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jeremie@dimino.org"
 homepage: "https://github.com/ocaml/camlp4"
 license: "LGPLv2"
@@ -7,13 +7,10 @@ build: [
   [make "all"]
   [make "install" "install-META"]
 ]
-depends: ["ocamlfind"]
 remove: [
   ["ocamlfind" "remove" "camlp4"]
   ["rm" "-rf" "%{lib}%/ocaml/camlp4"]
-  ["rm" "-f" "%{bin}%/camlp4"  "%{bin}%/camlp4boot" "%{bin}%/mkcamlp4"
-             "%{bin}%/camlp4r" "%{bin}%/camlp4rf"   "%{bin}%/camlp4orf"
-             "%{bin}%/camlp4o" "%{bin}%/camlp4of"   "%{bin}%/camlp4oof"
-             "%{bin}%/camlp4prof"]
+  ["rm" "-f" "%{bin}%/camlp4" "%{bin}%/camlp4boot" "%{bin}%/mkcamlp4" "%{bin}%/camlp4r" "%{bin}%/camlp4rf" "%{bin}%/camlp4orf" "%{bin}%/camlp4o" "%{bin}%/camlp4of" "%{bin}%/camlp4oof" "%{bin}%/camlp4prof"]
 ]
-ocaml-version: [>="4.03.0"]
+depends: "ocamlfind" {build}
+ocaml-version: [>= "4.03.0"]

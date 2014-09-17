@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "seliopou@gmail.com"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--%{async:enable}%-async" "--%{quickcheck:enable}%-quickcheck"]
@@ -7,7 +7,7 @@ build: [
 ]
 remove: ["ocamlfind" "remove" "netkat"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "core"
   "fieldslib"
   "openflow" {>= "0.3.0" & < "0.4.0"}

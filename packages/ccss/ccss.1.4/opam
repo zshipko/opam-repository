@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dario.teixeira@nleyten.com"
-authors: ["Dario Teixeira <dario.teixeira@nleyten.com>"]
+authors: "Dario Teixeira <dario.teixeira@nleyten.com>"
 homepage: "http://ccss.forge.ocamlcore.org/"
 license: "GPL-2.0"
 build: [
@@ -8,9 +8,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["rm" "%{bin}%/ccss"]]
+remove: ["rm" "%{bin}%/ccss"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "menhir"
   "batteries"
   "ulex"

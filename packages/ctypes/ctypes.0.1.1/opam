@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "yallop@gmail.com"
 tags: [
   "org:ocamllabs"
@@ -8,9 +8,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "ctypes"]]
+remove: ["ocamlfind" "remove" "ctypes"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ounit"
   ("oasis" {>= "0.3.0"} | "oasis-mirage" {>= "0.3.0"})
 ]

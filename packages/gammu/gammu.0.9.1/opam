@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "Christophe.Troestler@umons.ac.be"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "gammu"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "gammu"]
+depends: "ocamlfind" {build}
 depexts: [
-  [["ubuntu"]["libgammu-dev"]]
-  [["debian"]["libgammu-dev"]]
+  [["debian"] ["libgammu-dev"]]
+  [["ubuntu"] ["libgammu-dev"]]
 ]

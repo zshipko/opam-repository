@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "thelema314@gmail.com"
 homepage: "http://batteries.forge.ocamlcore.org/"
 license: "LGPL-2.1+ with OCaml linking exception"
@@ -7,7 +7,7 @@ build: [
   [make "all"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "batteries"]]
-depends: ["ocamlfind"]
-patches: ["cloexec.patch" {ocaml-version >= "4.01.0"}]
-ocaml-version: [<"4.02.0"]
+remove: ["ocamlfind" "remove" "batteries"]
+depends: "ocamlfind" {build}
+patches: "cloexec.patch" {ocaml-version >= "4.01.0"}
+ocaml-version: [< "4.02.0"]

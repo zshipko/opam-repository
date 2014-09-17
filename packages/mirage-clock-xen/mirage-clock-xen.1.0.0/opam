@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: [
   "org:mirage"
@@ -8,8 +8,8 @@ build: [
   [make "xen-build"]
   [make "xen-install"]
 ]
-remove: [["ocamlfind" "remove" "mirage-clock-xen"]]
+remove: ["ocamlfind" "remove" "mirage-clock-xen"]
 depends: [
-  "ocamlfind"
-  "mirage-types" {>="0.3.0"}
+  "ocamlfind" {build}
+  "mirage-types" {>= "0.3.0"}
 ]

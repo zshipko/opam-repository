@@ -1,21 +1,15 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "rudi.grinberg@gmail.com"
-authors: ["Rudi Grinberg"]
+authors: "Rudi Grinberg"
 license: "MIT"
-
 build: [
   [make "configure"]
   [make "build"]
   [make "install"]
 ]
-
-remove: [
-  ["ocamlfind" "remove" "mtl"]
-]
-
+remove: ["ocamlfind" "remove" "mtl"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "obuild"
 ]
-
-ocaml-version: [>="4.01.0"]
+ocaml-version: [>= "4.01.0"]

@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
-authors: ["Richard W.M. Jones"]
+authors: "Richard W.M. Jones"
 homepage: "http://code.google.com/p/bitstring/"
 license: "LGPLv2+ with exceptions and GPLv2+"
 build: [
@@ -8,9 +8,9 @@ build: [
   [make "srcdir=./"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "bitstring"]]
+remove: ["ocamlfind" "remove" "bitstring"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "base-unix"
   "camlp4"
 ]

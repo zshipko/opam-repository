@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 homepage: "http://savonet.sourceforge.net/"
 build: [
@@ -6,8 +6,8 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "alsa"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "alsa"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libasound2-dev"]]
   [["ubuntu"] ["libasound2-dev"]]

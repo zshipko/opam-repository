@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "gu.oliver@yahoo.com"
 authors: [
   "Oliver Gu <gu.oliver@yahoo.com>"
@@ -11,16 +11,16 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-build-doc: [["ocaml" "setup.ml" "-doc"]]
-remove: [["ocamlfind" "remove" "svm"]]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+remove: ["ocamlfind" "remove" "svm"]
 depends: [
   "core"
   "lacaml"
-  "ocamlfind"
+  "ocamlfind" {build}
 ]
-depopts: ["sexplib"]
-ocaml-version: [>= "3.12"]
+depopts: "sexplib"
 depexts: [
-  [["ubuntu"]["libsvm-dev"]]
-  [["debian"]["libsvm-dev"]]
+  [["debian"] ["libsvm-dev"]]
+  [["ubuntu"] ["libsvm-dev"]]
 ]
+ocaml-version: [>= "3.12"]

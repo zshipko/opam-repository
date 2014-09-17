@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "vb@luminar.eu.org"
 build: [
   ["./configure"]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "curl"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "curl"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libcurl4-gnutls-dev"]]
   [["ubuntu"] ["libcurl4-gnutls-dev"]]

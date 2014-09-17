@@ -1,20 +1,20 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "sylvain.pogodalla@inria.fr"
+authors: "Xavier Clerc"
+homepage: "http://bolt.x9c.fr/"
+license: "LGPL v3"
 build: [
   ["./configure" "-ocamlfind" "%{bin}%/ocamlfind"] {preinstalled}
-  ["./configure" "-ocaml-prefix" "%{prefix}%" "-ocamlfind" "%{bin}%/ocamlfind"]  {!preinstalled}
+  ["./configure" "-ocaml-prefix" "%{prefix}%" "-ocamlfind" "%{bin}%/ocamlfind"] {! preinstalled}
   [make "all"]
   [make "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "bolt"]
-]
+remove: ["ocamlfind" "remove" "bolt"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "camlp4"
 ]
-patches: ["opam.patch" "opam.bolt.META.patch"]
-
-homepage: "http://bolt.x9c.fr/"
-license: "LGPL v3"
-authors: ["Xavier Clerc"]
+patches: [
+  "opam.patch"
+  "opam.bolt.META.patch"
+]

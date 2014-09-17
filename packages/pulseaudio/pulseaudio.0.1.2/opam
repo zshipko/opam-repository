@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "pulseaudio"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "pulseaudio"]
+depends: "ocamlfind" {build}

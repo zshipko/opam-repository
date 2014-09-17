@@ -1,7 +1,7 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "http://projects.camlcity.org/projects/ocamlnet.html"
-doc: ["http://projects.camlcity.org/projects/dl/ocamlnet-3.6.0/doc/html-main/index.html"]
+doc: "http://projects.camlcity.org/projects/dl/ocamlnet-3.6.0/doc/html-main/index.html"
 build: [
   ["./configure" "-bindir" bin "-%{pcre-ocaml:enable}%-pcre" "-%{lablgtk:enable}%-gtk2" "-%{ssl:enable}%-ssl" "-%{camlzip:enable}%-zip" "-%{cryptokit:enable}%-crypto" "-with-nethttpd"]
   [make "all"]
@@ -35,7 +35,10 @@ remove: [
   ["ocamlfind" "remove" "shell"]
   ["ocamlfind" "remove" "smtp"]
 ]
-depends: ["ocamlfind" "camlp4"]
+depends: [
+  "ocamlfind" {build}
+  "camlp4"
+]
 depopts: [
   "lablgtk"
   "pcre-ocaml"
@@ -43,5 +46,5 @@ depopts: [
   "camlzip"
   "cryptokit"
 ]
-patches: ["ocamlnet-ocaml4.diff"]
+patches: "ocamlnet-ocaml4.diff"
 ocaml-version: [< "4.01.0"]

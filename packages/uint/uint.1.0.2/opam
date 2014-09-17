@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "andrenth@gmail.com"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "uint"]]
+remove: ["ocamlfind" "remove" "uint"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ospec" {>= "0.3.0"}
 ]

@@ -1,8 +1,8 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jonathan.protzenko@gmail.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "fix"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "fix"]
+depends: "ocamlfind" {build}

@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["rm" "setup.ml"] {ocaml-version >= "4.00.0"}
@@ -7,8 +7,8 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "bench"]]
+remove: ["ocamlfind" "remove" "bench"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "oasis" {>= "0.3.0"}
 ]

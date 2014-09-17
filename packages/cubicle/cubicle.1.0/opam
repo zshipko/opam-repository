@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "mebsout@lri.fr"
 authors: [
   "Sylvain Conchon"
@@ -11,7 +11,7 @@ build: [
   [make]
   [make "install" "MANDIR=%{man}%"]
 ]
-depends: "ocamlfind"
+depends: "ocamlfind" {build}
 depopts: "functory"
 depexts: [
   [["debian"] ["graphviz"]]

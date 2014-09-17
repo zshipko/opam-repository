@@ -1,5 +1,5 @@
-opam-version: "1"
-authors: ["Jean-Christophe Filliatre"]
+opam-version: "1.2"
+authors: "Jean-Christophe Filliatre"
 homepage: "https://www.lri.fr/~filliatr/ftp/ocaml/bdd/"
 license: "GPL"
 build: [
@@ -7,10 +7,8 @@ build: [
   ["obuild" "build"]
   ["obuild" "install"]
 ]
-remove: [
-  ["ocamlfind" "-remove" "bdd"]
-]
+remove: ["ocamlfind" "-remove" "bdd"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "obuild"
 ]

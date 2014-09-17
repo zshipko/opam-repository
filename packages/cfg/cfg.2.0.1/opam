@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "markus.mottl@gmail.com"
-authors: ["Markus Mottl"]
+authors: "Markus Mottl"
 homepage: "https://bitbucket.org/mmottl/cfg"
 license: "LGPL-2.1+ with OCaml linking exception"
 build: [
@@ -8,8 +8,8 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "cfg"]]
+remove: ["ocamlfind" "remove" "cfg"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "menhir"
 ]

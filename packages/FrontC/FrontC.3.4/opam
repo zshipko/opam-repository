@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make "install" "PREFIX=%{lib}%" "OCAML_SITE=%{lib}%"]
   ["cp" "META" "%{lib}%/FrontC"]
 ]
-remove: [["ocamlfind" "remove" "FrontC"]]
-depends: ["ocamlfind"]
-patches: ["opam.patch"]
+remove: ["ocamlfind" "remove" "FrontC"]
+depends: "ocamlfind" {build}
+patches: "opam.patch"

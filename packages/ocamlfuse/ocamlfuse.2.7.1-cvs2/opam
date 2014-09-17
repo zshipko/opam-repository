@@ -1,21 +1,19 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "alessandro.strada@gmail.com"
-authors: [ "Vincenzo Ciancia" ]
-license: "GPL-2"
+authors: "Vincenzo Ciancia"
 homepage: "http://sourceforge.net/apps/mediawiki/ocamlfuse"
+license: "GPL-2"
 build: [
   [make "-C" "lib" "INCDIRS=%{lib}%/camlidl"]
   [make "-C" "lib" "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "Fuse"]
-]
+remove: ["ocamlfind" "remove" "Fuse"]
 depends: [
   "camlidl"
-  "ocamlfind"
+  "ocamlfind" {build}
 ]
 depexts: [
   [["debian"] ["libfuse-dev"]]
   [["ubuntu"] ["libfuse-dev"]]
 ]
-ocaml-version: [ >= "3.08.0" ]
+ocaml-version: [>= "3.08.0"]

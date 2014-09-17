@@ -1,14 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "sheets@alum.mit.edu"
-tags: ["org:mirage"]
+tags: "org:mirage"
 build: [
   [make "PREFIX=%{prefix}%"]
   [make "PREFIX=%{prefix}%" "install"]
 ]
-remove: [["ocamlfind" "remove" "dnscurve"]]
+remove: ["ocamlfind" "remove" "dnscurve"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "dns" {>= "0.8.0"}
   "sodium" {>= "0.2.0"}
 ]
-depopts: ["lwt"]
+depopts: "lwt"

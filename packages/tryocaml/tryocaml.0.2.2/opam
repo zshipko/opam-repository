@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/OCamlPro/tryocaml"
-build: [[make]]
+build: [make]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "js_of_ocaml"
 ]
 ocaml-version: [< "4.01.0"]

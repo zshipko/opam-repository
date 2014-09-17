@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: [
   "org:mirage"
@@ -8,10 +8,10 @@ build: [
   [make "direct-build" "PREFIX=%{prefix}%"]
   [make "direct-install" "PREFIX=%{prefix}%"]
 ]
-remove: [["ocamlfind" "remove" "mirage-net"]]
+remove: ["ocamlfind" "remove" "mirage-net"]
 depends: [
   "mirage" {>= "0.9.5" & < "0.10.0"}
-  "ocamlfind"
+  "ocamlfind" {build}
   "ipaddr" {< "2.0.0"}
 ]
-conflicts: ["mirage-net-socket"]
+conflicts: "mirage-net-socket"

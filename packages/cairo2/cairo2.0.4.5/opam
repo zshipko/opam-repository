@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "Christophe.Troestler@umons.ac.be"
 authors: [
   "Christophe Troestler <Christophe.Troestler@umons.ac.be>"
@@ -11,17 +11,17 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-build-doc: [["ocaml" "setup.ml" "-doc"]]
-remove: [["ocamlfind" "remove" "cairo2"]]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+remove: ["ocamlfind" "remove" "cairo2"]
 depends: [
   "lablgtk"
-  "ocamlfind"
+  "ocamlfind" {build}
 ]
 depexts: [
   [["debian"] ["libcairo2-dev"]]
-  [["ubuntu"] ["libcairo2-dev"]]
   [["freebsd"] ["Graphics/cairo"]]
   [["openbsd"] ["Graphics/cairo"]]
+  [["ubuntu"] ["libcairo2-dev"]]
 ]
 conflicts: [
   "cairo" {= "0.4.1"}

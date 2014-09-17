@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
-authors: ["Xavier Clerc"]
+authors: "Xavier Clerc"
 homepage: "http://bolt.x9c.fr/"
 license: "LGPL v3"
 build: [
@@ -8,6 +8,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "bolt"]]
-depends: ["ocamlfind" "camlp4"]
-patches: ["opam.patch"]
+remove: ["ocamlfind" "remove" "bolt"]
+depends: [
+  "ocamlfind" {build}
+  "camlp4"
+]
+patches: "opam.patch"

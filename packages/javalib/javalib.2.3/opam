@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "sawja@inria.fr"
 build: [
   ["./configure.sh"]
@@ -12,7 +12,7 @@ remove: [
   ["ocamlfind" "remove" "ptrees"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "camlzip" {= "1.05"}
   ("extlib" {>= "1.5.1" & <= "1.6.0"} | "extlib-compat")
 ]

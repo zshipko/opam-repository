@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "sheets@alum.mit.edu"
 authors: [
   "David Sheets"
@@ -15,5 +15,5 @@ build: [
   [make "build"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "ipaddr"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "ipaddr"]
+depends: "ocamlfind" {build}

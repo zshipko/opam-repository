@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jun.furuse@gmail.com"
 authors: [
   "Jun Furuse"
@@ -11,11 +11,11 @@ build: [
   ["omake" "--configure" "INCLUDES=/usr/include/libexif"]
   ["omake" "install"]
 ]
-remove: [["ocamlfind" "remove" "camlimages"]]
+remove: ["ocamlfind" "remove" "camlimages"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "base-unix"
   "omake"
 ]
-depopts: ["lablgtk"]
+depopts: "lablgtk"
 ocaml-version: [>= "4.00.0" & <= "4.01.0"]

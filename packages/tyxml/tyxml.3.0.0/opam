@@ -1,13 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 build: [
   [make]
   [make "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "tyxml"]
-]
+remove: ["ocamlfind" "remove" "tyxml"]
 depends: [
-  "ocamlfind" "camlp4"
+  "ocamlfind" {build}
+  "camlp4"
 ]
 ocaml-version: [>= "3.12.1"]

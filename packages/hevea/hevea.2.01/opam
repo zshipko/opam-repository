@@ -1,7 +1,7 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make "PREFIX=%{prefix}%"]
   [make "install"]
 ]
-depends: ["ocamlfind"]
+depends: "ocamlfind" {build}

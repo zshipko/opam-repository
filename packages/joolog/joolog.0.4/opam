@@ -1,28 +1,25 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "hugo.heuzard@gmail.com"
-authors: [ "Hugo Heuzard" ]
-license: "LGPL-2.1 with OCaml linking exception"
+authors: "Hugo Heuzard"
 homepage: "https://github.com/hhugo/joolog"
+license: "LGPL-2.1 with OCaml linking exception"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "joolog"]
-]
-build-doc: [ "ocaml" "setup.ml" "-doc" ]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+remove: ["ocamlfind" "remove" "joolog"]
 depends: [
   "js_of_ocaml"
   "lwt"
   "react"
   "oasis"
-  "ocamlfind"
+  "ocamlfind" {build}
   "camlp4"
 ]
-
 conflicts: [
-  "lwt" {<"2.4.4" & >="2.4.5"} # due to react <1.0.0
-  "react" {>= "1.0.0" }
+  "lwt" {< "2.4.4" & >= "2.4.5"}
+  "react" {>= "1.0.0"}
 ]

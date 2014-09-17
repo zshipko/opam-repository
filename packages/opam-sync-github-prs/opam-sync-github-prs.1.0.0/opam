@@ -1,17 +1,15 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
-tags: [
-  "org:ocamllabs"
-]
+tags: "org:ocamllabs"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["rm" "-f" "%{bin}%/opam-sync-github-prs"]]
+remove: ["rm" "-f" "%{bin}%/opam-sync-github-prs"]
 depends: [
-  "ocamlfind"
-  "core" {>="109.53.01"}
-  "github" {>="0.8.0"}
-  "lwt" {>="2.4.2"}
+  "ocamlfind" {build}
+  "core" {>= "109.53.01"}
+  "github" {>= "0.8.0"}
+  "lwt" {>= "2.4.2"}
 ]
-ocaml-version: [>="4.01.0"]
+ocaml-version: [>= "4.01.0"]

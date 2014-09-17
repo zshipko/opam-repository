@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
-authors: ["Emmanuel Onzo"]
+authors: "Emmanuel Onzo"
 homepage: "http://dypgen.free.fr/"
 license: "CeCILL-B v1"
 build: [
@@ -11,5 +11,5 @@ remove: [
   ["ocamlfind" "remove" "dypgen"]
   ["ocamlfind" "remove" "dyp"]
 ]
-depends: ["ocamlfind"]
-patches: ["install-bsd-compatible.patch"]
+depends: "ocamlfind" {build}
+patches: "install-bsd-compatible.patch"

@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "http://cristal.inria.fr/~fpottier/alphaCaml/"
 build: [
   [make]
   [make "install" "PREFIX=%{prefix}%"]
 ]
-remove: [["ocamlfind" "remove" "alphaLib"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "alphaLib"]
+depends: "ocamlfind" {build}

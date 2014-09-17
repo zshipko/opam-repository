@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "alessandro.strada@gmail.com"
-authors: ["Vincenzo Ciancia"]
+authors: "Vincenzo Ciancia"
 build: [
   [make "-C" "lib" "INCDIRS=%{lib}%/camlidl"]
   [make "-C" "lib" "install"]
 ]
-remove: [["ocamlfind" "remove" "Fuse"]]
+remove: ["ocamlfind" "remove" "Fuse"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "camlidl"
 ]
 depexts: [

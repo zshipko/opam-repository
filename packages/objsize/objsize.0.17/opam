@@ -1,12 +1,15 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "ygrek@autistici.org"
 homepage: "http://objsize.forge.ocamlcore.org"
 build: [
   [make]
   [make "install"]
 ]
-build-test: [[make "test"]]
-build-doc: [[make "doc"]]
-remove: [["ocamlfind" "remove" "objsize"]]
-depends: ["ocamlfind" "camlp4"]
+build-test: [make "test"]
+build-doc: [make "doc"]
+remove: ["ocamlfind" "remove" "objsize"]
+depends: [
+  "ocamlfind" {build}
+  "camlp4"
+]
 ocaml-version: [>= "3.11"]

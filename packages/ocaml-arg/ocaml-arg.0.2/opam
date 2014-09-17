@@ -1,5 +1,5 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/samoht/ocaml-arg"
-build: [[make]]
-depends: ["ocamlfind"]
+build: [make]
+depends: "ocamlfind" {build}

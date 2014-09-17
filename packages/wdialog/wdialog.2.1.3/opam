@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["./configure"]
@@ -12,7 +12,7 @@ remove: [
   ["ocamlfind" "remove" "wdialog"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre-ocaml"
   "ocamlnet" {= "3.6.0"}
   "pxp"

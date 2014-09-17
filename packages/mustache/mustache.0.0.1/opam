@@ -1,23 +1,20 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "rudi.grinberg@gmail.com"
-authors: [ "Rudi Grinberg" ]
+authors: "Rudi Grinberg"
 license: "WTFPL"
 build: [
   [make "configure"]
   [make "build"]
   [make "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "mustache"]
-]
-build-doc: [ make "doc" ]
+build-doc: [make "doc"]
+remove: ["ocamlfind" "remove" "mustache"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ezjsonm"
   "oasis"
   "re"
   "sexplib"
   "ounit"
 ]
-
-ocaml-version: [>="4.01.0"]
+ocaml-version: [>= "4.01.0"]

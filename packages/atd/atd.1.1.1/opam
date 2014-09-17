@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/mjambon/atd"
 build: [
   [make]
   [make "install" "BINDIR=%{bin}%"]
 ]
-remove: [["ocamlfind" "remove" "atd"]]
+remove: ["ocamlfind" "remove" "atd"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "menhir"
   "easy-format"
 ]

@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "gregoire.henry@inria.fr"
 build: [
   [make]
@@ -6,7 +6,7 @@ build: [
 ]
 remove: ["ocamlfind" "remove" "deriving"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "optcomp" {>= "1.6"}
   "camlp4"
 ]

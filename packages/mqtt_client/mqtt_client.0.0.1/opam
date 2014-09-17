@@ -1,23 +1,16 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "philtomson@gmail.com"
-authors: ["Phil Tomson"]
+authors: "Phil Tomson"
 license: "MIT"
-
 build: [
   [make "all"]
   [make "install"]
 ]
-
-remove: [
-  ["ocamlfind" "remove" "mqtt_client"]
-]
-
+remove: ["ocamlfind" "remove" "mqtt_client"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "oasis"
   "async"
   "core"
 ]
-
-ocaml-version: [>="4.01.0"]
-
+ocaml-version: [>= "4.01.0"]

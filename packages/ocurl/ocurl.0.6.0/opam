@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "vb@luminar.eu.org"
 homepage: "http://ocurl.forge.ocamlcore.org"
 build: [
@@ -6,8 +6,8 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "curl"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "curl"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libcurl4-gnutls-dev"]]
   [["ubuntu"] ["libcurl4-gnutls-dev"]]

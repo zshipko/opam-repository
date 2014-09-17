@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "shcaml"]]
+remove: ["ocamlfind" "remove" "shcaml"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre-ocaml"
 ]
 ocaml-version: [= "3.12.1"]

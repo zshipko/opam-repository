@@ -1,17 +1,15 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "Nick Zalutskiy <nick@zalutskiy.com>"
 homepage: "https://github.com/pacemkr/ocaml-termbox"
-doc: "http://pacemkr.github.io/ocaml-termbox/"
 license: "BSD-2-Clause"
+doc: "http://pacemkr.github.io/ocaml-termbox/"
 build: [
   [make]
   [make "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "termbox"]
-]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "termbox"]
+depends: "ocamlfind" {build}
 depexts: [
-  [["ubuntu"]["python"]]
-  [["debian"]["python"]]
+  [["debian"] ["python"]]
+  [["ubuntu"] ["python"]]
 ]

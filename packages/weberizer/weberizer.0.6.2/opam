@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/downloads/Chris00"
 build: [
@@ -7,9 +7,9 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "weberizer"]]
+remove: ["ocamlfind" "remove" "weberizer"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "oasis" {= "0.3.0"}
   "ocamlnet"
 ]

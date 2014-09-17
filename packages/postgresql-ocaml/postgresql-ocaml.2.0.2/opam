@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "markus.mottl@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "postgresql"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "postgresql"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libpq-dev"]]
   [["ubuntu"] ["libpq-dev"]]

@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "bjack"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "bjack"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libjack-dev" "libsamplerate0-dev"]]
   [["ubuntu"] ["libjack-dev" "libsamplerate0-dev"]]

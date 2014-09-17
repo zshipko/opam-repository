@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "xmlplaylist"]]
+remove: ["ocamlfind" "remove" "xmlplaylist"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "xmlm"
 ]

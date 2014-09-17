@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jeremie@dimino.org"
 homepage: "https://github.com/diml/obus"
 build: [
@@ -6,9 +6,9 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "obus"]]
+remove: ["ocamlfind" "remove" "obus"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "lwt"
   "react" {>= "1.0.0"}
   "type_conv"

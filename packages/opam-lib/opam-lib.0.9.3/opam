@@ -1,7 +1,7 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/OCamlPro/opam"
-substs: ["depends.ocp"]
+substs: "depends.ocp"
 build: [
   ["./configure" "--prefix=%{prefix}%" "--mandir=%{prefix}%/man"]
   [make "META"]
@@ -10,12 +10,12 @@ build: [
   [make "libinstall"]
   ["rm" "opam.install"]
 ]
-remove: [["ocamlfind" "remove" "opam"]]
+remove: ["ocamlfind" "remove" "opam"]
 depends: [
   "ocamlgraph"
   "cmdliner"
   "dose" {= "3.1.2"}
   "cudf"
   "re" {>= "1.2.0"}
-  "ocamlfind"
+  "ocamlfind" {build}
 ]

@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: [
   "org:mirage"
@@ -8,11 +8,11 @@ build: [
   [make "all"]
   [make "install" "PREFIX=%{prefix}%"]
 ]
-remove: [["ocamlfind" "remove" "mirage"]]
+remove: ["ocamlfind" "remove" "mirage"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "cstruct" {< "0.6.0"}
   "lwt"
   "xenstore"
 ]
-ocaml-version: [>="4.00.1"]
+ocaml-version: [>= "4.00.1"]

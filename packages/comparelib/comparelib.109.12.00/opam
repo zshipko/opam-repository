@@ -1,11 +1,11 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "opensource@janestreet.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "comparelib"]]
+remove: ["ocamlfind" "remove" "comparelib"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "type_conv" {= "109.12.00"}
 ]

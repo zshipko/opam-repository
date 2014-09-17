@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "agarwal1975@gmail.com"
 authors: [
   "Ashish Agarwal"
@@ -21,9 +21,9 @@ build-doc: [
   ["omake" "doc"]
   ["omake" "install_doc" "INSTALL_DOCDIR=%{doc}%"]
 ]
-remove: [["ocamlfind" "remove" "biocaml"]]
+remove: ["ocamlfind" "remove" "biocaml"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "core" {>= "109.27.00" & <= "109.47.00"}
   "sexplib"
   "camlzip"

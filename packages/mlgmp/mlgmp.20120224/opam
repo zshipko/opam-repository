@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["sh" "-c" "rm -f *.cmo *.cmi *.cma *.cmxa *.o *.a *.cmx *.cmxs"]
@@ -9,11 +9,11 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "gmp"]]
+remove: ["ocamlfind" "remove" "gmp"]
 depends: [
   "conf-gmp"
   "oasis"
-  "ocamlfind"
+  "ocamlfind" {build}
 ]
 depexts: [
   [["debian"] ["libmpfr-dev"]]

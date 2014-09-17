@@ -1,15 +1,15 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--%{type_conv:enable}%-tc"]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "deriving"]]
+remove: ["ocamlfind" "remove" "deriving"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "optcomp" {>= "1.6"}
   "camlp4"
 ]
-depopts: ["type_conv"]
-conflicts: ["type_conv" {< "108.07.00"}]
+depopts: "type_conv"
+conflicts: "type_conv" {< "108.07.00"}

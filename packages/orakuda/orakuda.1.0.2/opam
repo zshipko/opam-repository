@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jun.furuse@gmail.com"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocaml" "setup.ml" "-uninstall"]]
+remove: ["ocaml" "setup.ml" "-uninstall"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "omake"
   "spotlib" {>= "2.0.0"}
   "pcre-ocaml"

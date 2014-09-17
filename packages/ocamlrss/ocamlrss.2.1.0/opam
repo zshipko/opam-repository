@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "rss"]]
+remove: ["ocamlfind" "remove" "rss"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "xmlm"
   "ocamlnet" {>= "3.6"}
 ]

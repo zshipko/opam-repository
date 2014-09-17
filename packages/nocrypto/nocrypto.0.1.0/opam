@@ -1,17 +1,15 @@
-opam-version: "1"
+opam-version: "1.2"
+tags: "org:mirage"
 build: [
-  ["ocaml" "setup.ml" "-configure" "--prefix" prefix ]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "nocrypto"]
-]
+remove: ["ocamlfind" "remove" "nocrypto"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "cstruct" {>= "1.2.0"}
   "zarith"
   "sexplib"
 ]
-tags: [ "org:mirage"]
-ocaml-version: [>="4.01.0"]
+ocaml-version: [>= "4.01.0"]

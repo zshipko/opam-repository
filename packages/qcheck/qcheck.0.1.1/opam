@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "simon.cruanes@inria.fr"
 homepage: "https://github.com/c-cube/qcheck/"
 build: [
@@ -6,6 +6,6 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "qcheck"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "qcheck"]
+depends: "ocamlfind" {build}
 ocaml-version: [>= "4.00.0"]

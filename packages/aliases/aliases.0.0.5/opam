@@ -1,19 +1,17 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "hugo.heuzard@gmail.com"
-authors: [ "Hugo Heuzard" ]
-license: "MIT"
+authors: "Hugo Heuzard"
 homepage: "https://github.com/besport/ocaml-aliases"
+license: "MIT"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "aliases"]
-]
-build-doc: [ "ocaml" "setup.ml" "-doc" ]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+remove: ["ocamlfind" "remove" "aliases"]
 depends: [
   "oasis"
-  "ocamlfind"
+  "ocamlfind" {build}
 ]

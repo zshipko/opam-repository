@@ -1,10 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["sh" "configure" "-ocaml-prefix" prefix "-ocamlfind" "%{bin}%/ocamlfind"]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "bisect"]]
-depends: ["ocamlfind" "camlp4"]
-patches: ["opam.patch"]
+remove: ["ocamlfind" "remove" "bisect"]
+depends: [
+  "ocamlfind" {build}
+  "camlp4"
+]
+patches: "opam.patch"

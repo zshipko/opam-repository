@@ -1,16 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 build: [
-  ["./configure"
-      "--prefix" prefix]
+  ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "ojquery"]
-]
+remove: ["ocamlfind" "remove" "ojquery"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "react"
   "js_of_ocaml" {< "2.4"}
   "lwt"

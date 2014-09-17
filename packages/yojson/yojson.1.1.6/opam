@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "yojson"]]
+remove: ["ocamlfind" "remove" "yojson"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "cppo"
   "easy-format"
   "biniou" {>= "1.0.6"}

@@ -1,9 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["./configure"]
   [make "all"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "xstrp4"]]
-depends: ["ocamlfind" "camlp4"]
+remove: ["ocamlfind" "remove" "xstrp4"]
+depends: [
+  "ocamlfind" {build}
+  "camlp4"
+]

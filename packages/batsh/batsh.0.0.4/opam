@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "byvoid@byvoid.com"
 authors: "BYVoid <byvoid@byvoid.com>"
 homepage: "https://github.com/BYVoid/Batsh"
@@ -10,7 +10,7 @@ build: [
 ]
 remove: ["ocamlfind" "remove" "batsh"]
 depends: [
-  "ocamlfind" {>= "1.3.2"}
+  "ocamlfind" {build & >= "1.3.2"}
   "core_kernel" {>= "109.42.00"}
   "dlist" {>= "0.0.2"}
   "menhir" {>= "20130912"}

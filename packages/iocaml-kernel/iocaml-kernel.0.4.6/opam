@@ -1,4 +1,4 @@
-opam-version: "1.1"
+opam-version: "1.2"
 maintainer: "andy.ray@ujamjar.com"
 homepage: "https://github.com/andrewray/iocaml"
 build: [
@@ -7,7 +7,7 @@ build: [
 ]
 remove: [make "uninstall"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "optcomp"
   "ounit"
   "uint" {>= "1.1.0"}

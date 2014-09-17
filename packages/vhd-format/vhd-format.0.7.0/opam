@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dave.scott@eu.citrix.com"
 tags: [
   "org:mirage"
@@ -8,9 +8,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [[make "uninstall"]]
+remove: [make "uninstall"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "lwt" {>= "2.4.3"}
   "cstruct" {>= "1.0.1"}
   "mirage-types" {>= "1.1.0"}

@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 homepage: "http://ocsigen.org/js_of_ocaml"
 build: [
   [make]
   [make "install" "BINDIR=%{bin}%"]
 ]
-remove: [["ocamlfind" "remove" "js_of_ocaml"]]
+remove: ["ocamlfind" "remove" "js_of_ocaml"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "deriving-ocsigen"
   "lwt" {>= "2.4"}
   "camlp4"

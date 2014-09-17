@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: [
   "org:mirage"
@@ -13,7 +13,7 @@ remove: ["ocamlfind" "remove" "dns"]
 depends: [
   "lwt" {>= "2.4.1"}
   "cstruct" {>= "0.6.0" & < "1.0.0"}
-  "ocamlfind"
+  "ocamlfind" {build}
   "cryptokit"
   "re"
   "uri"

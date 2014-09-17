@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jdralliam@gmail.com"
 build: [
   ["cmake" "."]
   [make]
   [make "install"]
 ]
-remove: [[make "uninstall"]]
-depends: ["ocamlfind"]
+remove: [make "uninstall"]
+depends: "ocamlfind" {build}
 depexts: [
- [["debian"] ["cmake" "libboost-dev" "libsfml-dev"]]
- [["ubuntu"] ["cmake" "libboost-dev" "libsfml-dev"]]
+  [["debian"] ["cmake" "libboost-dev" "libsfml-dev"]]
+  [["ubuntu"] ["cmake" "libboost-dev" "libsfml-dev"]]
 ]

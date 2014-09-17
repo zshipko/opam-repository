@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "http://cristal.inria.fr/~fpottier/bigbro/html/doc.html"
 license: "public domain"
@@ -7,8 +7,8 @@ build: [
   [make "install" "PREFIX=%{prefix}%" "MANDIR=%{man}%/man1"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre-ocaml"
   "camlp5"
 ]
-patches: ["opam.patch"]
+patches: "opam.patch"

@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 homepage: "http://eliom.org"
 build: [
@@ -6,14 +6,14 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["rm" "-rf" "%{lib}%/eliom" "%{man}%/man1/eliomc.1" "%{man}%/man1/eliomopt.1" "%{man}%/man1/eliomcp.1" "%{man}%/man1/js_of_eliom.1" "%{man}%/man1/eliomdep.1" "%{man}%/man1/eliom-distillery.1"]]
+remove: ["rm" "-rf" "%{lib}%/eliom" "%{man}%/man1/eliomc.1" "%{man}%/man1/eliomopt.1" "%{man}%/man1/eliomcp.1" "%{man}%/man1/js_of_eliom.1" "%{man}%/man1/eliomdep.1" "%{man}%/man1/eliom-distillery.1"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "deriving"
-  "js_of_ocaml" {>= "2.2" }
+  "js_of_ocaml" {>= "2.2"}
   "calendar"
   "tyxml" {< "3.2"}
-  "ocsigenserver" {>= "2.4.0" }
+  "ocsigenserver" {>= "2.4.0"}
   "camlp4"
   "ipaddr" {>= "2.1"}
 ]

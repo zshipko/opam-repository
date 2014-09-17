@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "soundtouch"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "soundtouch"]
+depends: "ocamlfind" {build}
 depexts: [
- [["debian"] ["libsoundtouch0-dev"]]
- [["ubuntu"] ["libsoundtouch0-dev"]]
+  [["debian"] ["libsoundtouch0-dev"]]
+  [["ubuntu"] ["libsoundtouch0-dev"]]
 ]

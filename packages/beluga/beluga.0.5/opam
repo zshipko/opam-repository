@@ -1,8 +1,8 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "fferre8@cs.cmgill.ca"
-build: [["omake" "NATIVE_ENABLED=true"]]
+build: ["omake" "NATIVE_ENABLED=true"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   ("extlib" | "extlib-compat")
   "ulex"
   "omake"

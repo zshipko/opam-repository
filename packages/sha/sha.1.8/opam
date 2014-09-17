@@ -1,10 +1,10 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/vincenthz/ocaml-sha"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "sha"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "sha"]
+depends: "ocamlfind" {build}
 os: ["linux"]

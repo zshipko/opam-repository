@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dave.scott@eu.citrix.com"
 tags: [
   "org:mirage"
@@ -9,18 +9,16 @@ build: [
   [make]
   [make "install" "BINDIR=%{bin}%"]
 ]
-remove: [
-  [make "uninstall"]
-]
+remove: [make "uninstall"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "lwt"
   "cmdliner"
 ]
 depexts: [
+  [["centos"] ["xen-devel"]]
   [["debian"] ["libxen-dev" "uuid-dev"]]
   [["ubuntu"] ["libxen-dev" "uuid-dev"]]
-  [["centos"] ["xen-devel"]]
   [["xenserver"] ["xen-dom0-libs-devel" "xen-libs-devel"]]
 ]
 ocaml-version: [>= "4.00.0"]

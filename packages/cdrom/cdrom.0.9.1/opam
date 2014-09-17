@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jonathan.ludlam@eu.citrix.com"
 tags: [
   "org:mirage"
@@ -8,9 +8,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "cdrom"]]
+remove: ["ocamlfind" "remove" "cdrom"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "obuild"
 ]
 os: ["linux"]

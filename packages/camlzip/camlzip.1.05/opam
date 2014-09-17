@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "seb@mondet.org"
-authors: ["Xavier Leroy"]
+authors: "Xavier Leroy"
 homepage: "http://forge.ocamlcore.org/projects/camlzip/"
 license: "LGPL-2.1+ with OCaml linking exception"
 build: [
@@ -12,9 +12,9 @@ remove: [
   ["ocamlfind" "remove" "zip"]
   ["ocamlfind" "remove" "camlzip"]
 ]
-depends: ["ocamlfind"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["zlib1g-dev"]]
   [["ubuntu"] ["zlib1g-dev"]]
 ]
-patches: ["fix-install.patch"]
+patches: "fix-install.patch"

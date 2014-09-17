@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "francois.berenger@inria.fr"
-authors: ["Bertrand Jeannet and Antoine Mine et. al."]
+authors: "Bertrand Jeannet and Antoine Mine et. al."
 homepage: "http://apron.cri.ensmp.fr/library/"
 license: "LGPL"
 build: [
@@ -8,14 +8,12 @@ build: [
   ["make"]
   ["make" "install"]
 ]
-remove: [["ocamlfind" "-remove" "apron"]]
+remove: ["ocamlfind" "-remove" "apron"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "camlidl"
   "conf-gmp"
   "conf-mpfr"
 ]
-patches: [
-   "opam.patch"
-]
+patches: "opam.patch"
 os: ["linux"]

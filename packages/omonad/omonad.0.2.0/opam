@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "Wojciech.Meyer@gmail.com"
 build: [
   ["oasis" "setup"]
@@ -6,9 +6,9 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "omonad"]]
+remove: ["ocamlfind" "remove" "omonad"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "oasis"
 ]
 ocaml-version: [>= "4.01.0" & < "4.02"]

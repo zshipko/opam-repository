@@ -1,14 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "faad"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "faad"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libfaad-dev"]]
   [["ubuntu"] ["libfaad-dev"]]
 ]
-

@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "berenger@riken.jp"
 build: [
   [make "all"]
   [make "opt"]
   [make "install"]
 ]
-remove: [[make "uninstall"]]
-depends: ["ocamlfind"]
+remove: [make "uninstall"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["mpi-default-dev"]]
   [["ubuntu"] ["mpi-default-dev"]]

@@ -1,9 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "mmouratov@gmail.com"
 homepage: "https://bitbucket.org/cakeplus/pa_where/"
 build: [
   [make "build"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "pa_where"]]
-depends: ["camlp4" "ocamlfind"]
+remove: ["ocamlfind" "remove" "pa_where"]
+depends: [
+  "camlp4"
+  "ocamlfind" {build}
+]

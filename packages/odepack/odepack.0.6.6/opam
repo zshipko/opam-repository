@@ -1,25 +1,23 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "Christophe.Troestler@umons.ac.be"
-authors: [ "Christophe Troestler <Christophe.Troestler@umons.ac.be>" ]
-license: "LGPL-3.0 with OCaml linking exception"
+authors: "Christophe Troestler <Christophe.Troestler@umons.ac.be>"
 homepage: "http://forge.ocamlcore.org/projects/odepack/"
+license: "LGPL-3.0 with OCaml linking exception"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "odepack"]
-]
-build-doc: [ "ocaml" "setup.ml" "-doc" ]
+build-doc: ["ocaml" "setup.ml" "-doc"]
+remove: ["ocamlfind" "remove" "odepack"]
 depends: [
   "base-bigarray"
-  "ocamlfind"
+  "ocamlfind" {build}
 ]
-ocaml-version: [ >= "3.12.1" ]
 depexts: [
-  [ [ "debian"  ] [ "gfortran" ] ]
-  [ [ "ubuntu"  ] [ "gfortran" ] ]
-  [ [ "freebsd" ] [ "lang/f77" ] ]
-  [ [ "openbsd" ] [ "lang/f77" ] ]
+  [["debian"] ["gfortran"]]
+  [["freebsd"] ["lang/f77"]]
+  [["openbsd"] ["lang/f77"]]
+  [["ubuntu"] ["gfortran"]]
 ]
+ocaml-version: [>= "3.12.1"]

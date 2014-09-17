@@ -1,14 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "opensource@janestreet.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "ocaml_plugin"]]
+remove: ["ocamlfind" "remove" "ocaml_plugin"]
 depends: [
   "camlp4"
-  "ocamlfind"
+  "ocamlfind" {build}
   "async" {>= "109.32.00" & <= "109.34.00"}
   "sexplib" {= "109.20.00"}
   "comparelib" {= "109.27.00"}

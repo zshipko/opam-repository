@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "michal.kurcewicz@gmail.com"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "nlopt"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "nlopt"]
+depends: "ocamlfind" {build}
 depexts: [
- [["debian"] ["libnlopt-dev"]]
- [["ubuntu"] ["libnlopt-dev"]]
+  [["debian"] ["libnlopt-dev"]]
+  [["ubuntu"] ["libnlopt-dev"]]
 ]

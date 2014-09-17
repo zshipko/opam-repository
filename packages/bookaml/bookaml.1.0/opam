@@ -1,18 +1,17 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dario.teixeira@nleyten.com"
-authors: ["Dario Teixeira <dario.teixeira@nleyten.com>"]
+authors: "Dario Teixeira <dario.teixeira@nleyten.com>"
 homepage: "http://bookaml.forge.ocamlcore.org/"
 license: "LGPL-2.1 with OCaml linking exception"
-ocaml-version: [>= "4.00.0"]
 build: [
   ["./configure" "--prefix" prefix "--docdir" "%{doc}%/bookaml" "--%{ocsigenserver:enable}%-ocsigen" "--%{ocamlnet:enable}%-ocamlnet"]
   [make]
   [make "doc"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "bookaml"]]
+remove: ["ocamlfind" "remove" "bookaml"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "batteries"
   "calendar"
   "cryptokit"
@@ -24,4 +23,4 @@ depopts: [
   "ocsigenserver"
   "tyxml"
 ]
-
+ocaml-version: [>= "4.00.0"]

@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "zoggy@bat8.org"
-authors: ["Maxence Guesdon"]
+authors: "Maxence Guesdon"
 homepage: "http://gtk-extras.forge.ocamlcore.org/"
 license: "GNU Lesser General Public License version 2 or later"
-doc: ["http://gtk-extras.forge.ocamlcore.org/"]
+doc: "http://gtk-extras.forge.ocamlcore.org/"
 tags: [
   "gtk"
   "utils"
@@ -14,9 +14,9 @@ build: [
   [make "all"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "lablgtk2-extras"]]
+remove: ["ocamlfind" "remove" "lablgtk2-extras"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "config-file" {>= "1.1"}
   "xmlm" {>= "1.1.1"}
   "lablgtk" {>= "2.16.0"}

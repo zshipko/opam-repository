@@ -1,16 +1,16 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "markdown"]]
+remove: ["ocamlfind" "remove" "markdown"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "extlib" {= "1.5.3"}
   "sexplib"
   "ounit"
   "tyxml"
 ]
-patches: ["opam.patch"]
+patches: "opam.patch"

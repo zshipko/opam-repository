@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "sawja@inria.fr"
 build: [
   ["./configure.sh"]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "sawja"]]
+remove: ["ocamlfind" "remove" "sawja"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "javalib" {= "2.3"}
 ]

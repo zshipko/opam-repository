@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "zoggy@bat8.org"
 authors: "Maxence Guesdon"
 homepage: "http://zoggy.github.io/genet"
@@ -19,7 +19,7 @@ remove: [
   [make "uninstall"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "config-file" {>= "1.1"}
   "lablgtk-extras" {>= "1.2"}
   "lablgtk" {>= "2.16.0"}

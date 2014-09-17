@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "xavier.allamigeon (at) inria.fr"
 build: [
   ["./configure" "--prefix" prefix]
@@ -9,12 +9,10 @@ remove: [
   ["./configure" "--prefix" prefix]
   [make "uninstall"]
 ]
-depends: ["ocamlfind"]
+depends: "ocamlfind" {build}
 depopts: [
   "zarith"
   "mlgmp"
 ]
+patches: "fix-makefile.diff"
 ocaml-version: [>= "3.12.0"]
-patches: [
-  "fix-makefile.diff"
-]

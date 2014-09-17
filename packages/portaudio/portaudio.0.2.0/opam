@@ -1,14 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "portaudio"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "portaudio"]
+depends: "ocamlfind" {build}
 depexts: [
-  [["debian"] ["portaudio19-dev" "pkg-config"]]
-  [["ubuntu"] ["portaudio19-dev" "pkg-config"]]
+  [["debian"] ["pkg-config" "portaudio19-dev"]]
+  [["ubuntu"] ["pkg-config" "portaudio19-dev"]]
 ]
-

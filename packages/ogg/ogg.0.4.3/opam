@@ -1,14 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" lib "--mandir" man]
   [make "all"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "ogg"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "ogg"]
+depends: "ocamlfind" {build}
 depexts: [
-  [ ["ubuntu"] ["libogg-dev"] ]
-  [ ["debian"] ["libogg-dev"] ]
-  [["osx" "homebrew"] ["libogg"]]
+  [["debian"] ["libogg-dev"]]
+  [["homebrew" "osx"] ["libogg"]]
+  [["ubuntu"] ["libogg-dev"]]
 ]

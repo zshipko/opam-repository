@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 license: "AGPL"
 build: [
@@ -7,7 +7,7 @@ build: [
   ["_build/myocamlbuild.exe" "ocamllib/libbase.cma" "ocamllib/libbase.cmxa"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ulex"
   "camlzip"
   "ocamlgraph"

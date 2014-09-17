@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jp.deplaix@gmail.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "ldap"]]
+remove: ["ocamlfind" "remove" "ldap"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ocamlnet" {>= "3.6.0"}
   "pcre-ocaml"
   "ssl"

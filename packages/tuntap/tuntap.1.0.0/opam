@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "vb@luminar.eu.org"
 tags: [
   "org:mirage"
@@ -8,12 +8,12 @@ build: [
   [make "PREFIX=%{prefix}%"]
   [make "PREFIX=%{prefix}%" "install"]
 ]
-remove: [["ocamlfind" "remove" "tuntap"]]
+remove: ["ocamlfind" "remove" "tuntap"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ipaddr" {>= "2.2.0"}
   "cmdliner"
   "lwt"
   "ounit"
 ]
-ocaml-version: [>="4.00.0"]
+ocaml-version: [>= "4.00.0"]

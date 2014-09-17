@@ -1,8 +1,8 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "romain.bardou@inria.fr"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "procord"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "procord"]
+depends: "ocamlfind" {build}

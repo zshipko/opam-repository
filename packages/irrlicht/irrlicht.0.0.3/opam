@@ -1,17 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "alexis.bernadet@noos.fr"
-ocaml-version: [>= "3.12" ]
 build: [
-    ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
-    ["ocaml" "setup.ml" "-build"]
-    ["ocaml" "setup.ml" "-install"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "irrlicht"]
-]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "irrlicht"]
+depends: "ocamlfind" {build}
 depexts: [
-  [["debian"] ["libirrlicht-dev" "g++"]]
-  [["ubuntu"] ["libirrlicht-dev" "g++"]]
+  [["debian"] ["g++" "libirrlicht-dev"]]
+  [["ubuntu"] ["g++" "libirrlicht-dev"]]
 ]
-
+ocaml-version: [>= "3.12"]

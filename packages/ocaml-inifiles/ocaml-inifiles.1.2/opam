@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make "all"]
   [make "opt"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "inifiles"]]
+remove: ["ocamlfind" "remove" "inifiles"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre-ocaml"
 ]
-patches: ["ocaml-inifiles.diff"]
+patches: "ocaml-inifiles.diff"

@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "install" "PREFIX=%{prefix}%"]
 ]
-remove: [["ocamlfind" "remove" "json-static"]]
+remove: ["ocamlfind" "remove" "json-static"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "json-wheel"
   "camlp4"
 ]

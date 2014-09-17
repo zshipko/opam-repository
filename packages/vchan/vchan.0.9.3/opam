@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jonathan.ludlam@eu.citrix.com"
 authors: [
   "Vincent Bernardoff"
@@ -10,9 +10,9 @@ build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "vchan"]]
+remove: ["ocamlfind" "remove" "vchan"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "mirage"
   "xenstore" {>= "1.2.2"}
   ("mirage-xen" {>= "0.9.6"} | "mirage-unix" {>= "0.9.6"} "xenctrl" {>= "0.9.8"} "xenstore_transport")

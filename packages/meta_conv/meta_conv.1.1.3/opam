@@ -1,16 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jun.furuse@gmail.com"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["ocaml" "setup.ml" "-uninstall"]
-]
-ocaml-version: [= "4.01.0"]
+remove: ["ocaml" "setup.ml" "-uninstall"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "omake"
   "type_conv"
 ]
+ocaml-version: [= "4.01.0"]

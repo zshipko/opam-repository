@@ -1,17 +1,17 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "schroedinger"]]
+remove: ["ocamlfind" "remove" "schroedinger"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ogg"
 ]
 depexts: [
- [["ubuntu"]["libschroedinger-dev"]]
- [["debian"]["libschroedinger-dev"]]
- [["osx" "homebrew"]["schroedinger"]]
+  [["debian"] ["libschroedinger-dev"]]
+  [["homebrew" "osx"] ["schroedinger"]]
+  [["ubuntu"] ["libschroedinger-dev"]]
 ]

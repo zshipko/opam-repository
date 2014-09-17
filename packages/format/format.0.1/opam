@@ -1,7 +1,10 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "philippe.veber@gmail.com"
 build: [
   [make]
   [make "install"]
 ]
-depends: ["ocamlfind" "camlp4"]
+depends: [
+  "ocamlfind" {build}
+  "camlp4"
+]

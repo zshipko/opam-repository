@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/ocaml/opam2web"
 bug-reports: "https://github.com/ocaml/opam2web/issues"
@@ -6,11 +6,9 @@ build: [
   [make]
   [make "install" "PREFIX=%{prefix}%"]
 ]
-remove: [
-  ["rm" "-f" "%{prefix}%/bin/opam2web"]
-]
+remove: ["rm" "-f" "%{prefix}%/bin/opam2web"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "opam-lib" {>= "1.1.1"}
   "opamfu" {>= "0.1.1"}
   "re"

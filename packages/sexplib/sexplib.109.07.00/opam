@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "opensource@janestreet.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "sexplib"]]
+remove: ["ocamlfind" "remove" "sexplib"]
 depends: [
   "camlp4"
-  "ocamlfind"
+  "ocamlfind" {build}
   "type_conv" {= "109.07.00"}
 ]
-patches: ["disable_warn_error.patch"]
+patches: "disable_warn_error.patch"

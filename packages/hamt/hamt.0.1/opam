@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "rudi.grinberg@gmail.com"
 authors: [
   "Thibault Suzanne"
@@ -6,18 +6,17 @@ authors: [
   "Rudi Grinberg"
 ]
 license: "MIT"
-
 build: [
   [make "configure"]
   [make "all"]
   [make "install"]
 ]
-build-doc: [[make "doc"]]
-remove: [["ocamlfind" "remove" "hamt"]]
+build-doc: [make "doc"]
+remove: ["ocamlfind" "remove" "hamt"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "oasis"
   "monomorphic"
-  "ounit" {>="1.0.2"}
+  "ounit" {>= "1.0.2"}
 ]
-ocaml-version: [>="4.01.0"]
+ocaml-version: [>= "4.01.0"]

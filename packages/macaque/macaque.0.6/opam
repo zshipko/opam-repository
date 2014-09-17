@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make "-C" "src"]
   [make "-C" "src" "install"]
 ]
-remove: [["ocamlfind" "remove" "macaque"]]
+remove: ["ocamlfind" "remove" "macaque"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pgocaml" {< "2.0"}
   "camlp4"
 ]

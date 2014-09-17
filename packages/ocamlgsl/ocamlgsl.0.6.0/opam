@@ -1,11 +1,11 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "install-findlib"]
 ]
-remove: [["ocamlfind" "remove" "gsl"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "gsl"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["gawk"]]
   [["ubuntu"] ["gawk"]]

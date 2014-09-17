@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "ygrek@autistici.org"
 homepage: "https://github.com/ermine/xmpp"
 license: "BSD3"
@@ -7,11 +7,11 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-build-test: [["ocaml" "setup.ml" "-test"]]
-remove: [["ocamlfind" "remove" "erm_xmpp"]]
+build-test: ["ocaml" "setup.ml" "-test"]
+remove: ["ocamlfind" "remove" "erm_xmpp"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "erm_xml" {>= "0.3"}
   "cryptokit" {>= "1.5"}
 ]
-patches: ["disable_tests.patch"]
+patches: "disable_tests.patch"

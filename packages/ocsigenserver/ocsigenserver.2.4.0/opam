@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 build: [
   ["sh" "configure" "--prefix" prefix "--ocsigen-user" user "--ocsigen-group" group "--commandpipe" "%{lib}%/ocsigenserver/var/run/ocsigenserver_command" "--logdir" "%{lib}%/ocsigenserver/var/log/ocsigenserver" "--mandir" "%{man}%/man1" "--docdir" "%{lib}%/ocsigenserver/share/doc/ocsigenserver" "--commandpipe" "%{lib}%/ocsigenserver/var/run/ocsigenserver_command" "--staticpagesdir" "%{lib}%/ocsigenserver/var/www" "--datadir" "%{lib}%/ocsigenserver/var/lib/ocsigenserver" "--sysconfdir" "%{lib}%/ocsigenserver/etc/ocsigenserver"]
   [make]
   [make "install"]
 ]
-remove: [["rm" "-rf" "%{lib}%/ocsigenserver"]]
+remove: ["rm" "-rf" "%{lib}%/ocsigenserver"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "base-unix"
   "base-threads"
   "react"
@@ -20,9 +20,5 @@ depends: [
   ("dbm" | "sqlite3-ocaml")
   "ipaddr" {>= "2.1"}
 ]
-depopts: [
-  "camlzip"
-]
-conflicts: [
-  "camlzip" {< "1.04"}
-]
+depopts: "camlzip"
+conflicts: "camlzip" {< "1.04"}

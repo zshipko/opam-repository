@@ -1,6 +1,6 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dario.teixeira@nleyten.com"
-authors: ["Richard W.M. Jones <rich@annexia.org>"]
+authors: "Richard W.M. Jones <rich@annexia.org>"
 homepage: "http://pgocaml.forge.ocamlcore.org/"
 license: "LGPL-2.0 with OCaml linking exception"
 build: [
@@ -9,12 +9,11 @@ build: [
   [make "doc"]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "pgocaml"]]
+remove: ["ocamlfind" "remove" "pgocaml"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "pcre-ocaml"
   "calendar"
   "csv"
   "camlp4"
 ]
-

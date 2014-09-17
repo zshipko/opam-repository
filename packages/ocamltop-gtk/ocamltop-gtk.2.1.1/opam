@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "zoggy@bat8.org"
 build: [
   ["./configure" "--prefix" prefix]
   [make "all"]
   [make "install-lib"]
 ]
-remove: [[make "uninstall-lib"]]
+remove: [make "uninstall-lib"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "gtktop" {>= "2.0"}
   "lablgtk" {>= "2.16.0"}
 ]

@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "zoggy@bat8.org"
 authors: "Maxence Guesdon"
 homepage: "http://zoggy.github.io/ocaml-rdf/"
@@ -18,7 +18,7 @@ build: [
 ]
 remove: ["ocamlfind" "remove" "rdf"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "xmlm" {>= "1.1.1"}
   "ocamlnet" {>= "3.6.5"}
   "ulex" {>= "1.1"}

@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "opt"]
   [make "install" "BIN_DIR=%{bin}%"]
 ]
-remove: [["ocamlfind" "remove" "xmlrpc"]]
+remove: ["ocamlfind" "remove" "xmlrpc"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ocamlnet" {>= "3.6.0"}
   "pxp"
   "annexlib"

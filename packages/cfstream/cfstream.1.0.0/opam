@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "agarwal1975@gmail.com"
 build: [
   ["rm" "-f" "configure.om"]
@@ -10,8 +10,8 @@ build-doc: [
   ["omake" "install_doc" "DOC_DIR=%{doc}%"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "omake"
   "core"
 ]
-ocaml-version: [>="4.00.0"]
+ocaml-version: [>= "4.00.0"]

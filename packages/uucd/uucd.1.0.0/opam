@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
-authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+authors: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 homepage: "http://erratique.ch/software/uucd"
 license: "BSD3"
-doc: ["http://erratique.ch/software/uucd/doc/Uucd"]
+doc: "http://erratique.ch/software/uucd/doc/Uucd"
 tags: [
   "unicode"
   "database"
@@ -14,7 +14,7 @@ build: [
   ["./pkg/build" "true"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "xmlm"
 ]
 ocaml-version: [>= "4.00.0"]

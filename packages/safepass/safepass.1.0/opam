@@ -1,8 +1,8 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "ocaml-safepass"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "ocaml-safepass"]
+depends: "ocamlfind" {build}

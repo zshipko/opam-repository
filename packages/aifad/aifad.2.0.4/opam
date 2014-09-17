@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "markus.mottl@gmail.com"
 homepage: "https://bitbucket.org/mmottl/aifad"
 build: [
@@ -6,11 +6,11 @@ build: [
   [make]
   [make "install"]
 ]
-ocaml-version: [>= "4.00.0"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "menhir"
   "cfg"
   "pcre-ocaml"
   "res"
 ]
+ocaml-version: [>= "4.00.0"]

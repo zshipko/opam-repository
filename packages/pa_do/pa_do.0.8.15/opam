@@ -1,9 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "vbmithr@gmail.com"
 build: [
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "pa_do"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "pa_do"]
+depends: "ocamlfind" {build}
 ocaml-version: [<= "4.01.0"]

@@ -1,12 +1,12 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "frei0r"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "frei0r"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["frei0r-plugins-dev"]]
   [["ubuntu"] ["frei0r-plugins-dev"]]

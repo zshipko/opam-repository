@@ -1,17 +1,17 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "smimram@gmail.com"
 build: [
   ["./configure" "--prefix" prefix]
   [make]
   [make "install"]
 ]
-remove: [["ocamlfind" "remove" "vorbis"]]
+remove: ["ocamlfind" "remove" "vorbis"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ogg"
 ]
 depexts: [
- [["debian"] ["libvorbis-dev"]]
- [["ubuntu"] ["libvorbis-dev"]]
- [["osx" "homebrew"] ["libvorbis"]]
+  [["debian"] ["libvorbis-dev"]]
+  [["homebrew" "osx"] ["libvorbis"]]
+  [["ubuntu"] ["libvorbis-dev"]]
 ]

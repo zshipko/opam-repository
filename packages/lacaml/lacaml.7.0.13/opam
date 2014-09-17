@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "markus.mottl@gmail.com"
 authors: [
   "Egbert Ammicht <eammicht@lucent.com>"
@@ -17,8 +17,8 @@ build: [
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "lacaml"]]
-depends: ["ocamlfind"]
+remove: ["ocamlfind" "remove" "lacaml"]
+depends: "ocamlfind" {build}
 depexts: [
   [["debian"] ["libblas-dev" "liblapack-dev"]]
   [["ubuntu"] ["libblas-dev" "liblapack-dev"]]

@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jonathan.ludlam@eu.citrix.com"
 tags: [
   "org:mirage"
@@ -14,8 +14,8 @@ remove: [
   ["rm" "%{prefix}%/bin/nbd-tool"]
 ]
 depends: [
-  "ocamlfind"
-  "lwt" {>="2.4.3"}
+  "ocamlfind" {build}
+  "lwt" {>= "2.4.3"}
   "cstruct" {>= "1.0.1"}
   "cmdliner"
 ]

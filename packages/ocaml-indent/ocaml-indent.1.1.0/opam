@@ -1,16 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "jun.furuse@gmail.com"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["omake" "uninstall"]
-]
+remove: ["omake" "uninstall"]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "sexplib"
-  "omake" 
+  "omake"
 ]
 ocaml-version: [>= "4.00.0" & < "4.01.0"]

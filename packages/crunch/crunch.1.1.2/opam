@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: [
   "org:mirage"
@@ -14,6 +14,6 @@ remove: [
   ["ocamlfind" "remove" "crunch"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "cmdliner"
 ]

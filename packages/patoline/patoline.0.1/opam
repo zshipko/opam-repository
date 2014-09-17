@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "pe@patoline.org"
 build: [
   ["ocaml" "unix.cma" "configure.ml" "--prefix" prefix "--bin-prefix" bin "--ocaml-libs" lib "--fonts-dir" "%{share}%/patoline/fonts" "--grammars-dir" "%{lib}%/patoline/grammars" "--plugins-dir" "%{lib}%/patoline/plugins" "--hyphen-dir" "%{share}%/patoline/hyphen"]
@@ -6,7 +6,7 @@ build: [
   [make "install"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "camomile"
   "camlimages"
   "dypgen"

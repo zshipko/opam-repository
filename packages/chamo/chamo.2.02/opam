@@ -1,4 +1,4 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "zoggy@bat8.org"
 build: [
   ["./configure" "--prefix" prefix]
@@ -10,11 +10,11 @@ remove: [
   [make "uninstall-lib"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "config-file" {>= "1.1"}
   "lablgtk-extras" {>= "1.2"}
   "lablgtk" {>= "2.16.0"}
-  "conf-glade" { = "2" }
+  "conf-glade" {= "2"}
   "pcre-ocaml"
 ]
 ocaml-version: [>= "4.00.0"]

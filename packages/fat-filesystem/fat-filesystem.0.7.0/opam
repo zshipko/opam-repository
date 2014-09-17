@@ -1,20 +1,18 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dave@recoil.org"
 build: [
   ["./configure" "--bindir" "%{bin}%"]
   [make]
   [make "install"]
 ]
-remove: [
-  [make "uninstall"]
-]
+remove: [make "uninstall"]
 depends: [
   "cstruct" {>= "1.0.1"}
-  "ocamlfind"
+  "ocamlfind" {build}
   "lwt" {>= "2.4.3"}
   "mirage-types" {>= "0.4.0" & < "1.1.0"}
   "mirage-block-unix" {>= "0.2.0"}
-  "io-page-unix" {>= "0.9.9"} 
+  "io-page-unix" {>= "0.9.9"}
   "re"
   "cmdliner"
 ]
