@@ -3,6 +3,7 @@ maintainer: "romain.calascibetta@gmail.com"
 authors: "Romain Calascibetta"
 homepage: "https://github.com/Cumulus/Syndic"
 license: "MIT"
+dev-repo: "git://github.com/Cumulus/Syndic"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

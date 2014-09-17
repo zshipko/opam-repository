@@ -3,6 +3,7 @@ maintainer: "opam-devel@lists.ocaml.org"
 authors: "Sergei Lebedev"
 homepage: "https://github.com/superbobry/ocaml-textwrap"
 license: "MIT"
+dev-repo: "git://github.com/superbobry/ocaml-textwrap"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

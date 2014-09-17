@@ -8,6 +8,7 @@ authors: [
   "Christophe Troestler"
 ]
 homepage: "http://biocaml.org"
+dev-repo: "git://github.com/biocaml/biocaml"
 build: [
   ["omake" "configure" "PREFIX=%{prefix}%" "BUILD_TESTS=false" "BUILD_APP=true"]
   ["omake" "-j2"]

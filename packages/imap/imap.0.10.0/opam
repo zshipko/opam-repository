@@ -1,16 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "n.oje.bar@gmail.com"
-authors: [ "Nicolas Ojeda Bar <n.oje.bar@gmail.com>" ]
-license: "MIT"
-ocaml-version: [ >= "4.01.0" ]
+authors: "Nicolas Ojeda Bar <n.oje.bar@gmail.com>"
 homepage: "http://www.github.com/nojb/ocaml-imap"
+license: "MIT"
+dev-repo: "git://github.com/nojb/ocaml-imap"
 build: [
   [make "PREFIX=%{prefix}%"]
   [make "PREFIX=%{prefix}%" "install"]
 ]
-remove: [
-  ["ocamlfind" "remove" "imap"]
-]
+remove: ["ocamlfind" "remove" "imap"]
 depends: [
   "uint"
   "cryptokit"
@@ -24,3 +22,4 @@ depopts: [
   "lwt"
   "gsasl"
 ]
+ocaml-version: [>= "4.01.0"]

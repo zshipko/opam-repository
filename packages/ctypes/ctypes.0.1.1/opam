@@ -4,6 +4,7 @@ tags: [
   "org:ocamllabs"
   "org:mirage"
 ]
+dev-repo: "git://github.com/ocamllabs/ocaml-ctypes"
 build: [
   [make]
   [make "install"]

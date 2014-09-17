@@ -5,6 +5,7 @@ homepage: "https://github.com/whitequark/ppx_deriving"
 license: "MIT"
 doc: "http://whitequark.github.io/ppx_deriving"
 tags: "syntax"
+dev-repo: "git://github.com/whitequark/ppx_deriving"
 build: ["ocaml" "pkg/build.ml" "native=true" "native-dynlink=true"]
 build-test: ["ocamlbuild" "-classic-display" "-use-ocamlfind" "src_test/test_ppx_deriving.byte" "--"]
 build-doc: ["make" "doc"]

@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "pelzlpj@gmail.com"
+dev-repo: "git://github.com/pelzlpj/capnp-ocaml"
 build: [
   ["env" "PREFIX=%{prefix}%" "omake"]
   ["env" "PREFIX=%{prefix}%" "omake" "install"]

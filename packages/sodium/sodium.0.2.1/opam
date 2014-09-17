@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "sheets@alum.mit.edu"
 tags: "org:mirage"
+dev-repo: "git://github.com/dsheets/ocaml-sodium"
 build: [
   [make]
   [make "PREFIX=%{prefix}%" "install"]

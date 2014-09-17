@@ -12,6 +12,7 @@ authors: [
 ]
 homepage: "https://bitbucket.org/mmottl/lacaml"
 license: "LGPL-2.1+ with OCaml linking exception"
+dev-repo: "git://github.com/mmottl/lacaml"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

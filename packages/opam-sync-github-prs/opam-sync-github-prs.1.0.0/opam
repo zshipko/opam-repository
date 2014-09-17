@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: "org:ocamllabs"
+dev-repo: "git://github.com/avsm/opam-sync-github-prs"
 build: [
   [make]
   [make "install"]

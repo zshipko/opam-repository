@@ -8,6 +8,7 @@ tags: [
   "iter"
   "fold"
 ]
+dev-repo: "git://github.com/c-cube/sequence"
 build: [
   [make "all" "doc"]
   [make "install"]

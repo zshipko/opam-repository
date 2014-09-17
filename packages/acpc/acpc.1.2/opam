@@ -1,8 +1,9 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "berenger@riken.jp"
-authors: ["Francois Berenger"]
+authors: "Francois Berenger"
 homepage: "https://github.com/UnixJunkie/ACPC"
 license: "BSD"
+dev-repo: "git://github.com/UnixJunkie/ACPC"
 build: [
   ["obuild" "configure"]
   ["obuild" "build"]
@@ -18,21 +19,7 @@ build: [
   ["cp" "dist/build/acpc_pqrtool/acpc_pqrtool" bin]
   ["cp" "dist/build/acpc_pltool/acpc_pltool" bin]
 ]
-remove: [
-  ["rm" "-f"
-  "%{bin}%/acpc"
-  "%{bin}%/acpc_par"
-  "%{bin}%/acpc_consrank"
-  "%{bin}%/acpc_scorer"
-  "%{bin}%/acpc_ertool"
-  "%{bin}%/acpc_auctool"
-  "%{bin}%/acpc_mol2reader"
-  "%{bin}%/acpc_codec"
-  "%{bin}%/acpc_mol2tool"
-  "%{bin}%/acpc_pqrtool"
-  "%{bin}%/acpc_pltool"
-  ]
-]
+remove: ["rm" "-f" "%{bin}%/acpc" "%{bin}%/acpc_par" "%{bin}%/acpc_consrank" "%{bin}%/acpc_scorer" "%{bin}%/acpc_ertool" "%{bin}%/acpc_auctool" "%{bin}%/acpc_mol2reader" "%{bin}%/acpc_codec" "%{bin}%/acpc_mol2tool" "%{bin}%/acpc_pqrtool" "%{bin}%/acpc_pltool"]
 depends: [
   "obuild"
   "base-unix"

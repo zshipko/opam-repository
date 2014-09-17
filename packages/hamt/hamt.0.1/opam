@@ -6,6 +6,7 @@ authors: [
   "Rudi Grinberg"
 ]
 license: "MIT"
+dev-repo: "git://github.com/rgrinberg/ocaml-hamt"
 build: [
   [make "configure"]
   [make "all"]

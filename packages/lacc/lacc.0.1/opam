@@ -3,6 +3,7 @@ maintainer: "berenger@riken.jp"
 authors: "Francois Berenger"
 homepage: "https://github.com/UnixJunkie/lacc"
 license: "LGPL-2.1+ with OCaml linking exception"
+dev-repo: "git://github.com/UnixJunkie/lacc"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

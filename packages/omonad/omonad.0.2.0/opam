@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "Wojciech.Meyer@gmail.com"
+dev-repo: "git://github.com/danmey/omonad"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--enable-tests" "--prefix" prefix]

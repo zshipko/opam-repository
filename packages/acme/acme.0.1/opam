@@ -2,6 +2,7 @@ opam-version: "1.2"
 maintainer: "raphael.proust@cl.cam.ac.uk"
 authors: "Raphaël Proust"
 license: "BSD"
+dev-repo: "git://github.com/raphael-proust/ocaml-acme"
 build: [
   [make]
   [make "install"]

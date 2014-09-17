@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "markus.mottl@gmail.com"
 homepage: "https://bitbucket.org/mmottl/aifad"
+dev-repo: "git://github.com/mmottl/aifad"
 build: [
   ["./configure" "--prefix" prefix]
   [make]

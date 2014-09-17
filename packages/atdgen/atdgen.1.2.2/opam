@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/MyLifeLabs/atdgen"
+dev-repo: "git://github.com/MyLifeLabs/atdgen"
 build: [
   [make]
   [make "install" "BINDIR=%{bin}%"]

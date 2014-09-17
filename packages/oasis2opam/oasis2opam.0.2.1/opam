@@ -10,6 +10,7 @@ tags: [
   "build"
   "install"
 ]
+dev-repo: "git://github.com/ocaml/oasis2opam"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

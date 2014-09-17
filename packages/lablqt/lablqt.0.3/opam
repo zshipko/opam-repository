@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "kakadu.hafanana@gmail.com"
+dev-repo: "git://github.com/Kakadu/lablqt"
 build: [
   ["./configure"]
   [make "generator"]

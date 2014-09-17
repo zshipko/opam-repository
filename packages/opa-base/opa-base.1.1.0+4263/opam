@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 license: "AGPL"
+dev-repo: "git://github.com/MLstate/opalang"
 build: [
   ["./configure" "-prefix" prefix]
   [make "_build/myocamlbuild.exe"]

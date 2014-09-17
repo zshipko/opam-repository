@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "seliopou@gmail.com"
 homepage: "https://github.com/frenetic-lang/ocaml-openflow"
+dev-repo: "git://github.com/frenetic-lang/ocaml-openflow"
 build: [
   ["ocaml" "setup.ml" "-configure" "--%{async:enable}%-async" "--%{quickcheck:enable}%-quickcheck"]
   ["ocaml" "setup.ml" "-build"]

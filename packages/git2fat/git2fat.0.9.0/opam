@@ -1,15 +1,14 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "thomas@gazagnaire.org"
-authors: [ "Thomas Gazagnaire" ]
+authors: "Thomas Gazagnaire"
 license: "ISC"
+dev-repo: "git://github.com/samoht/git2fat"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [
-  ["rm" "-f" "%{bin}%/git2fat"]
-]
+remove: ["rm" "-f" "%{bin}%/git2fat"]
 depends: [
   "git" {>= "0.10.1" & < "1.0.0"}
   "cmdliner"

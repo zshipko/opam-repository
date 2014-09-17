@@ -6,6 +6,7 @@ authors: [
 ]
 homepage: "https://bitbucket.org/mmottl/gsl-ocaml"
 license: "GPL-3+"
+dev-repo: "git://github.com/mmottl/gsl-ocaml"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

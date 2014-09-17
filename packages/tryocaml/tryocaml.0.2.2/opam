@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/OCamlPro/tryocaml"
+dev-repo: "git://github.com/OCamlPro/tryocaml"
 build: [make]
 depends: [
   "ocamlfind" {build}

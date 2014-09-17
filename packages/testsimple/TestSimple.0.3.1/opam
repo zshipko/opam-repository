@@ -3,6 +3,7 @@ maintainer: "hez@0ok.org"
 authors: "Stevan Little"
 homepage: "https://github.com/hcarty/ocaml-testsimple"
 license: "LGPL-2.1 with OCaml linking exception"
+dev-repo: "git://github.com/hcarty/ocaml-testsimple"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

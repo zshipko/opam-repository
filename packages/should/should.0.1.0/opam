@@ -3,6 +3,7 @@ maintainer: "mlin@mlin.net"
 authors: "Mike Lin"
 homepage: "https://github.com/mlin/should.ml"
 license: "MIT"
+dev-repo: "git://github.com/mlin/should.ml"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "anil@recoil.org"
 tags: "org:mirage"
+dev-repo: "git://github.com/mirage/ocaml-conduit"
 build: [
   [make]
   [make "install"]

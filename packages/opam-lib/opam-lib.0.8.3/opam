@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/OCamlPro/opam"
+dev-repo: "git://github.com/OCamlPro/opam"
 substs: "depends.ocp"
 build: [
   ["./configure" "--prefix=%{prefix}%" "--mandir=%{prefix}%/man"]

@@ -3,6 +3,7 @@ maintainer: "abe@sf.ecei.tohoku.ac.jp"
 authors: "Akinori ABE <abe@sf.ecei.tohoku.ac.jp>"
 homepage: "https://github.com/akabe/slap"
 license: "LGPL-2.1 with OCaml linking exception"
+dev-repo: "git://github.com/akabe/slap"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

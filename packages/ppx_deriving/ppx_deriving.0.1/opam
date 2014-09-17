@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "Peter Zotov <whitequark@whitequark.org>"
+dev-repo: "git://github.com/whitequark/ppx_deriving"
 build: ["ocaml" "pkg/build.ml" "native=true" "native-dynlink=true"]
 depends: [
   "ocamlfind" {build}

@@ -5,6 +5,7 @@ authors: [
   "Thomas Gazagnaire"
 ]
 license: "ISC"
+dev-repo: "git://github.com/mirage/ocaml-lazy-trie"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

@@ -3,6 +3,7 @@ maintainer: "hugo.heuzard@gmail.com"
 authors: "Hugo Heuzard"
 homepage: "https://github.com/hhugo/joolog"
 license: "LGPL-2.1 with OCaml linking exception"
+dev-repo: "git://github.com/hhugo/jsoolog"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]

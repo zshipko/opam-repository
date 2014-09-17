@@ -11,6 +11,7 @@ tags: [
   "clib:jasper"
   "clib:grib"
 ]
+dev-repo: "git://github.com/hcarty/ocaml-grib"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

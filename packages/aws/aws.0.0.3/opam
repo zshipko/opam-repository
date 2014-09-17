@@ -8,6 +8,7 @@ authors: [
 ]
 homepage: "https://github.com/besport/aws/"
 license: "MIT"
+dev-repo: "git://github.com/besport/aws"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]

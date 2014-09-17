@@ -1,5 +1,6 @@
 opam-version: "1.2"
 tags: "org:mirage"
+dev-repo: "git://github.com/mirleft/ocaml-asn1-combinators"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

@@ -2,6 +2,7 @@ opam-version: "1.2"
 maintainer: "thomas@gazagnaire.org"
 authors: "Thomas Gazagnaire"
 license: "ISC"
+dev-repo: "git://github.com/samoht/alcotest"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

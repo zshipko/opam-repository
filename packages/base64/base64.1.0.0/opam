@@ -5,6 +5,7 @@ authors: [
   "Anil Madhavapeddy"
 ]
 license: "ISC"
+dev-repo: "git://github.com/mirage/ocaml-base64"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

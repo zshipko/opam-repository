@@ -3,6 +3,7 @@ maintainer: "superbobry@gmail.com"
 authors: "Sergei Lebedev"
 homepage: "https://github.com/superbobry/pareto"
 license: "MIT"
+dev-repo: "git://github.com/superbobry/pareto"
 build: [
   ["./configure" "--prefix" prefix]
   [make]

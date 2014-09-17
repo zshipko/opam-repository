@@ -5,6 +5,7 @@ authors: [
   "Simon Cruanes"
 ]
 license: "WTFPL"
+dev-repo: "git://github.com/rgrinberg/bencode"
 build: [
   [make "all"]
   [make "install"]

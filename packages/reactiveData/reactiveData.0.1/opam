@@ -10,6 +10,7 @@ tags: [
   "event"
   "frp"
 ]
+dev-repo: "git://github.com/hhugo/reactiveData"
 build: ["ocaml" "pkg/build.ml" "native=true" "native-dynlink=true"]
 depends: [
   "ocamlfind" {build}

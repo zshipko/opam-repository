@@ -1,6 +1,7 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "contact@ocamlpro.com"
 homepage: "https://github.com/OCamlPro/ocp-index"
+dev-repo: "git://github.com/OCamlPro/ocp-index"
 build: [
   ["ocp-build" "-init"]
   ["ocp-build" "ocp-index-lib" "ocp-index" "ocp-browser" {"%{curses:installed}%"}]
@@ -16,5 +17,5 @@ depends: [
   "ocp-build" {>= "1.99.4-beta"}
   "cmdliner"
 ]
-depopts: ["curses"]
-ocaml-version: [ >= "4.00.0" & < "4.02" ]
+depopts: "curses"
+ocaml-version: [>= "4.00.0" & < "4.02"]

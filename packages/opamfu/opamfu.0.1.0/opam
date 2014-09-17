@@ -3,6 +3,7 @@ maintainer: "sheets@alum.mit.edu"
 authors: "David Sheets"
 homepage: "https://github.com/ocamllabs/opamfu"
 license: "ISC"
+dev-repo: "git://github.com/ocamllabs/opamfu"
 build: [
   [make "build"]
   [make "install"]

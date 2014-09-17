@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "superbobry@gmail.com"
+dev-repo: "git://github.com/selectel/alberto"
 build: [
   ["./configure" "--prefix" prefix]
   [make]

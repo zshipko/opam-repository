@@ -3,6 +3,7 @@ maintainer: "hez@0ok.org"
 authors: "Hezekiah M. Carty <hez@0ok.org>"
 homepage: "https://github.com/hcarty/lwt-zmq"
 license: "MIT"
+dev-repo: "git://github.com/hcarty/lwt-zmq"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

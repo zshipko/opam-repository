@@ -6,6 +6,7 @@ tags: [
   "org:mirage"
   "org:ocamllabs"
 ]
+dev-repo: "git://github.com/samoht/ezjsonm"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--%{lwt:enable}%-lwt"]
   ["ocaml" "setup.ml" "-build"]

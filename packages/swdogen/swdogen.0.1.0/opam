@@ -3,6 +3,7 @@ maintainer: "colsy2@gmail.com"
 authors: "C.Y. yuen"
 homepage: "https://github.com/dotcy/swdogen/wiki"
 license: "MIT"
+dev-repo: "git://github.com/dotcy/swdogen"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

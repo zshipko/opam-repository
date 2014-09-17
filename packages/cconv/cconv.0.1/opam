@@ -7,6 +7,7 @@ tags: [
   "gadt"
   "serialization"
 ]
+dev-repo: "git://github.com/c-cube/cconv"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--%{bencode:enable}%-bencode" "--%{yojson:enable}%-yojson" "--%{sexplib:enable}%-sexp"]
   [make "all"]

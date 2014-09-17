@@ -3,6 +3,7 @@ maintainer: "Vincent Bernardoff <vb@luminar.eu.org>"
 authors: "Vincent Bernardoff <vb@luminar.eu.org>"
 license: "ISC"
 tags: "smtp"
+dev-repo: "git://github.com/vbmithr/ocaml-smtp"
 build: ["ocaml" "pkg/build.ml" "native=true" "native-dynlink=true" "unix=%{base-unix:installed}%" "lwt=%{lwt:installed}%"]
 depends: "ocamlfind" {build}
 depopts: "lwt"

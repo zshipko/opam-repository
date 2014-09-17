@@ -10,6 +10,7 @@ tags: [
   "query"
   "prolog"
 ]
+dev-repo: "git://github.com/c-cube/datalog"
 build: [
   ["./configure" "--bindir" bin "--docdir" "%{doc}/datalog/"]
   [make "all" "install_file" "doc" "man"]

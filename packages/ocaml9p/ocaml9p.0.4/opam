@@ -5,6 +5,7 @@ authors: [
   "Oscar Hellström"
 ]
 license: "BSD"
+dev-repo: "git://github.com/raphael-proust/ocaml9p"
 build: [
   [make]
   [make "install"]

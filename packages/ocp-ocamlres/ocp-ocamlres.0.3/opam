@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "benjamin@ocamlpro.com"
 homepage: "https://github.com/OCamlPro/ocp-ocamlres"
+dev-repo: "git://github.com/OCamlPro/ocp-ocamlres"
 build: [
   [make "all"]
   [make "doc"]

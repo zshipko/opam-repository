@@ -3,6 +3,7 @@ maintainer: "rudi.grinberg@gmail.com"
 authors: "Rudi Grinberg"
 homepage: "https://github.com/rgrinberg/asynz-zmq"
 license: "MIT"
+dev-repo: "git://github.com/rgrinberg/async-zmq"
 build: [
   [make "configure-no-tests"]
   [make "build"]

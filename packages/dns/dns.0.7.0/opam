@@ -16,6 +16,7 @@ tags: [
   "org:mirage"
   "org:xapi-project"
 ]
+dev-repo: "git://github.com/mirage/ocaml-dns"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--%{base-unix:enable}%-lwt" "--%{mirage-net:enable}%-mirage"]
   ["ocaml" "setup.ml" "-build"]

@@ -3,6 +3,7 @@ maintainer: "jeremie@dimino.org"
 authors: "Jérémie Dimino"
 homepage: "https://github.com/diml/optcomp"
 license: "BSD3"
+dev-repo: "git://github.com/diml/optcomp"
 build: [
   ["./configure" "--prefix" prefix]
   [make]

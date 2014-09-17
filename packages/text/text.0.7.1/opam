@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "vb@luminar.eu.org"
+dev-repo: "git://github.com/vbmithr/ocaml-text"
 build: [
   ["./configure" "--%{pcre-ocaml:enable}%-pcre"]
   [make]

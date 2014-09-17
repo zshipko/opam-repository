@@ -3,6 +3,7 @@ maintainer: "ygrek@autistici.org"
 homepage: "https://github.com/mfp/extprot"
 license: "MIT"
 doc: "https://github.com/mfp/extprot/blob/master/README.md"
+dev-repo: "git://github.com/mfp/extprot"
 build: [
   ["omake"]
   ["omake" "install" "prefix=%{prefix}%"]

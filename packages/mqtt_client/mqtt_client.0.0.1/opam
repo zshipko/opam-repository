@@ -2,6 +2,7 @@ opam-version: "1.2"
 maintainer: "philtomson@gmail.com"
 authors: "Phil Tomson"
 license: "MIT"
+dev-repo: "git://github.com/philtomson/mqtt_client"
 build: [
   [make "all"]
   [make "install"]

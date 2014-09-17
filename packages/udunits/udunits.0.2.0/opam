@@ -8,6 +8,7 @@ tags: [
   "clib:m"
   "clib:expat"
 ]
+dev-repo: "git://github.com/hcarty/ocaml-udunits"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

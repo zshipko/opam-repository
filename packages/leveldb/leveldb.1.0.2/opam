@@ -3,6 +3,7 @@ maintainer: "mfp@acm.org"
 homepage: "https://github.com/mfp/ocaml-leveldb"
 license: "LGPL+static"
 doc: "https://github.com/mfp/ocaml-leveldb/blob/master/README.md"
+dev-repo: "git://github.com/mfp/ocaml-leveldb"
 build: [
   ["omake" "-j9"]
   ["omake" "install" "prefix=%{prefix}%"]

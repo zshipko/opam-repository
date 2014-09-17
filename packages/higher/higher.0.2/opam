@@ -3,6 +3,7 @@ maintainer: "yallop@gmail.com"
 homepage: "https://github.com/ocamllabs/higher"
 license: "MIT"
 tags: "org:ocamllabs"
+dev-repo: "git://github.com/ocamllabs/higher"
 build: [
   [make]
   [make "install"]

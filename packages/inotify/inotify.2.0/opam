@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "whitequark@whitequark.org"
+dev-repo: "git://github.com/whitequark/ocaml-inotify"
 build: [
   ["ocaml" "setup.ml" "-configure" "--%{lwt:enable}%-lwt" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]

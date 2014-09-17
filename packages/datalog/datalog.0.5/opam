@@ -9,6 +9,7 @@ tags: [
   "relational"
   "query"
 ]
+dev-repo: "git://github.com/c-cube/datalog"
 build: [
   ["./configure" "--bindir" bin "--docdir" doc]
   [make "all" "install_file"]

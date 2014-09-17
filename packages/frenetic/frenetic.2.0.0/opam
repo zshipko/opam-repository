@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "seliopou@gmail.com"
+dev-repo: "git://github.com/frenetic-lang/frenetic"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--%{async:enable}%-async" "--%{quickcheck:enable}%-quickcheck"]
   ["ocaml" "setup.ml" "-build"]

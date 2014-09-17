@@ -3,6 +3,7 @@ maintainer: "francois.berenger@inria.fr"
 authors: "Bertrand Jeannet and Antoine Mine et. al."
 homepage: "http://apron.cri.ensmp.fr/library/"
 license: "LGPL"
+dev-repo: "git://github.com/UnixJunkie/apron-vanilla"
 build: [
   ["make" "rebuild"]
   ["make"]

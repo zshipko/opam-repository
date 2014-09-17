@@ -2,6 +2,7 @@ opam-version: "1.2"
 maintainer: "dev@domoco.fr"
 authors: "Incubaid Team"
 homepage: "http://arakoon.org/"
+dev-repo: "git://github.com/Incubaid/arakoon"
 build: [
   [make]
   [make "install" "DESTDIR=%{prefix}%"]

@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "support@toml.epimeros.org"
 homepage: "http://sagotch.github.io/To.ml/"
+dev-repo: "git://github.com/sagotch/To.ml"
 build: [
   [make "build"]
   [make "install"]

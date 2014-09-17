@@ -1,6 +1,7 @@
 opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 homepage: "http://eliom.org"
+dev-repo: "git://github.com/ocsigen/eliom"
 build: [
   ["sh" "configure" "--prefix" prefix "--mandir" man "--docdir" "%{lib}%/eliom/doc" "--datadir" "%{lib}%/eliom/share"]
   [make]

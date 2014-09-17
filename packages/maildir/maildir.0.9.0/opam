@@ -3,6 +3,7 @@ maintainer: "dominic.price@nottingham.ac.uk"
 authors: "Nicolas Ojeda Bar"
 homepage: "https://github.com/nojb/ocaml-maildir"
 license: "MIT"
+dev-repo: "git://github.com/nojb/ocaml-maildir"
 build: [
   ["oasis" "setup"]
   ["./configure" "--prefix" prefix]

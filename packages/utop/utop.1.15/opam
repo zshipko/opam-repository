@@ -3,6 +3,7 @@ maintainer: "jeremie@dimino.org"
 authors: "Jérémie Dimino"
 homepage: "https://github.com/diml/utop"
 license: "BSD3"
+dev-repo: "git://github.com/diml/utop"
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
