@@ -2,7 +2,7 @@ opam-version: "1.2"
 maintainer: "Louis Gesbert <louis.gesbert@ocamlpro.com>"
 authors: "Louis Gesbert <louis.gesbert@ocamlpro.com>"
 license: "ISC"
-tags: "org:ocamlpro"
+tags: ["org:ocamlpro" "flags:plugin"]
 homepage: "https://github.com/AltGr/opam-user-setup"
 bug-reports: "https://github.com/AltGr/opam-user-setup/issues"
 depends: [
