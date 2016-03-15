@@ -1,0 +1,19 @@
+opam-version: "2.0"
+descr: """
+support allocation profiling on x86_64
+"""
+maintainer: "contact@ocamlpro.com"
+depends: ["base-unix" "base-bigarray" "base-threads"]
+flags: compiler
+setenv: CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"
+build: [
+  ["./configure" "-prefix" prefix]
+  [make "world"]
+  [make "world.opt"]
+  [make "install"]
+]
+substs: "ocaml.config"
+url {
+  src:
+    "https://github.com/mshinwell/ocaml/tarball/4.00.1-allocation-profiling"
+}

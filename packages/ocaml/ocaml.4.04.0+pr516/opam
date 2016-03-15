@@ -1,0 +1,19 @@
+opam-version: "2.0"
+descr: """
+Improve Texp_record constructor representation
+"""
+maintainer: "contact@ocamlpro.com"
+depends: ["base-unix" "base-bigarray" "base-threads"]
+flags: compiler
+setenv: CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"
+build: [
+  ["./configure" "-prefix" prefix "-with-debug-runtime"]
+  [make "world"]
+  [make "world.opt"]
+  [make "install"]
+]
+substs: "ocaml.config"
+url {
+  src:
+    "https://github.com/chambart/ocaml-1/archive/improve_texp_record_representation.tar.gz"
+}

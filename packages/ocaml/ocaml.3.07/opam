@@ -1,0 +1,27 @@
+opam-version: "2.0"
+descr: """
+Official 3.07 release
+"""
+maintainer: "contact@ocamlpro.com"
+depends: ["base-unix" "base-bigarray" "base-threads"]
+flags: compiler
+setenv: CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"
+build: [
+  ["./configure" "-prefix" prefix]
+  [make "world"]
+  [make "world.opt"]
+  [make "install"]
+  ["mkdir" "-p" "%{prefix}%/lib/ocaml/compiler-libs"]
+  [
+    "cp" "-r" "typing" "parsing" "utils" "%{prefix}%/lib/ocaml/compiler-libs/"
+  ]
+]
+substs: "ocaml.config"
+patches: "remove_DEBUG.patch"
+extra-sources: [
+  "https://raw.githubusercontent.com/ocaml/opam-repository/master/compilers/3.07/3.07/files/remove_DEBUG.patch"
+  "9731695cd565297f8867aa5b1f9d42ad"
+]
+url {
+  src: "http://caml.inria.fr/pub/distrib/ocaml-3.07/ocaml-3.07.tar.gz"
+}

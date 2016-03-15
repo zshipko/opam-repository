@@ -1,0 +1,18 @@
+opam-version: "2.0"
+descr: """
+add colors into error reporting for `[%ocaml.error "oops"]`
+"""
+maintainer: "contact@ocamlpro.com"
+depends: ["base-unix" "base-bigarray" "base-threads"]
+flags: compiler
+setenv: CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"
+build: [
+  ["./configure" "-prefix" prefix "-with-debug-runtime"]
+  [make "world"]
+  [make "world.opt"]
+  [make "install"]
+]
+substs: "ocaml.config"
+url {
+  src: "https://github.com/c-cube/ocaml/archive/colors-in-ppx-errors.tar.gz"
+}
