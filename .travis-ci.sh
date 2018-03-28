@@ -110,8 +110,11 @@ function build_one {
     depext=$(opam depext -ls $pkg --no-sources)
     opam depext $pkg
     echo
+    echo "====== Installing dependencies ======"
+    opam install --deps-only $pkg
+    echo
     echo "====== Installing package ======"
-    opam install $pkg
+    opam install -t -v $pkg
     opam remove -a ${pkg%%.*}
     if [ "$depext" != "" ]; then
       case $TRAVIS_OS_NAME in
