@@ -1,0 +1,36 @@
+opam-version: "2.0"
+maintainer: "Zach Shipko <zachshipko@gmail.com>"
+authors: ["Zach Shipko <zachshipko@gmail.com>"]
+homepage: "https://github.com/zshipko/resp"
+doc: "https://zshipko.github.io/resp/doc"
+license: "ISC"
+dev-repo: "git+https://github.com/zshipko/resp.git"
+bug-reports: "https://github.com/zshipko/resp/issues"
+depends:
+[
+    "ocaml" {>= "4.05.0"}
+    "dune" {build}
+    "resp" {>= "0.9"}
+    "resp-client" {>= "0.9"}
+    "resp-server" {>= "0.9"}
+    "conduit-lwt-unix" {>= "1.3"}
+    "alcotest" {with-test}
+    "alcotest-lwt" {with-test}
+]
+
+build:
+[
+    ["dune" "build" "-p" name "-j" jobs]
+    ["dune" "runtest" "-p" name] {with-test}
+]
+
+synopsis: """
+Redis serialization protocol library for Unix
+"""
+url {
+  src: "https://github.com/zshipko/resp/archive/v0.1.tar.gz"
+  checksum: [
+    "md5=5aab5bcfce2fb0952f5d2b742d28349a"
+    "sha512=eea2893fcbf427368e1f243747bdbc4ee638acd9a18731ff338867774192c1f54c0cc89bea56a84806ed92dc99359d7d08dcf6bee4a40b7198ebebaad0a79124"
+  ]
+}
