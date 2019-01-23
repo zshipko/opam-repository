@@ -1,0 +1,31 @@
+opam-version: "2.0"
+maintainer: "Zach Shipko <zachshipko@gmail.com>"
+authors: ["Zach Shipko <zachshipko@gmail.com>"]
+homepage: "https://github.com/zshipko/resp"
+doc: "https://zshipko.github.io/resp/doc"
+license: "ISC"
+dev-repo: "git+https://github.com/zshipko/resp.git"
+bug-reports: "https://github.com/zshipko/resp/issues"
+depends:
+[
+    "ocaml" {>= "4.03.0"}
+    "dune" {build}
+    "lwt" {>= "4.1"}
+    "alcotest" {with-test}
+]
+
+build:
+[
+    ["dune" "build" "-p" name "-j" jobs]
+]
+
+synopsis: """
+Redis serialization protocol library
+"""
+url {
+  src: "https://github.com/zshipko/resp/archive/v0.9.tar.gz"
+  checksum: [
+    "md5=b000cc16f69a95aebf02fe177665688a"
+    "sha512=989a624c07736f677a906820c1b7806f60f17b983961439c8c5afb2e61e73ed54cf74b6a5512d06a5c7b1d6a222f64902e8f2258f53650ed76cdd70dde363b6f"
+  ]
+}
